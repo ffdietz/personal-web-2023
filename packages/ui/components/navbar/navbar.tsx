@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Flex, Text } from "@chakra-ui/react";
+import { Box, Flex, Text } from "@chakra-ui/react";
 import Link from "next/link";
 import Logo from "../logo/logo";
 
@@ -23,20 +23,24 @@ export function Navbar() {
       bg="bgColor"
       justifyContent="space-between"
       minWidth="100vw"
+      minH={32}
       position="fixed"
       top={0}
-      px={16}
+      px={28}
       py={8}
     >
-      <Link
-        href="/"
+      <Box
+        cursor="pointer"
         onClick={() => {
           setActive("");
-          window.scrollTo(0, 0);
+          window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+          });
         }}
       >
         <Logo />
-      </Link>
+      </Box>
       <Flex gap={8}>
         {navLinks.map((link) => {
           return (
