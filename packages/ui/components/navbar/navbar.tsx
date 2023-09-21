@@ -1,7 +1,8 @@
 import { useState } from "react";
 import { Box, Flex, Text } from "@chakra-ui/react";
 import Link from "next/link";
-import Logo from "../logo/logo";
+import Logo from "../logo/Logo";
+
 
 import { navLinks } from "@constants";
 
