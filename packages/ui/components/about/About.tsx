@@ -1,10 +1,3 @@
-<<<<<<< Updated upstream
-import React from 'react'
-
-export function About() {
-  return (
-    <div>About</div>
-=======
 import { Center, Heading, Stack, Text } from "@chakra-ui/react";
 import { biography } from "@constants";
 
@@ -16,6 +9,5 @@ export function About() {
         <Text as="h1" w="lg">{biography}</Text>
       </Center>
     </Stack>
->>>>>>> Stashed changes
   )
 }

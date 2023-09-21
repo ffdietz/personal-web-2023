@@ -1,18 +1,26 @@
-import { Flex } from "@chakra-ui/react";
+import { useState } from "react";
+import { Box, Flex, Text } from "@chakra-ui/react";
 import Link from "next/link";
 import Logo from "../logo/Logo";
 
 
+import { navLinks } from "@constants";
+
 export function Navbar() {
+  const [active, setActive] = useState<string | null>(null);
+
+  const handleScroll = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
+    e.preventDefault();
+    const targetId = e.currentTarget.href.replace(/.*\#/, "");
+    const section = document.getElementById(targetId);
+    window.scrollTo({
+      top: section?.getBoundingClientRect().top,
+      behavior: "smooth",
+    });
+  };
+
   return (
-<<<<<<< Updated upstream
     <Flex bg="bgColor" minWidth="100vw" minHeight={38} padding={8}>
-      <Logo />
-      <Flex gap={8} >
-        <Link href="">About</Link>
-        <Link href="">Works</Link>
-        <Link href="">Contact</Link>
-=======
     <Flex
       bg="transparent"
       justifyContent="space-between"
@@ -56,8 +64,8 @@ export function Navbar() {
             </Link>
           );
         })}
->>>>>>> Stashed changes
       </Flex>
+    </Flex>
     </Flex>
   );
 }

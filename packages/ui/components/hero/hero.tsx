@@ -1,6 +1,9 @@
+import { Heading, Stack } from "@chakra-ui/react";
 
 export function Hero() {
   return (
-    <div>Hero</div>
-  )
+    <Stack w="100vw" h="100vh" border="1px" mt={32} px={28}>
+      <Heading as="h1">Hero</Heading>
+    </Stack>
+  );
 }

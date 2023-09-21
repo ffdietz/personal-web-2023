@@ -7,16 +7,16 @@ export const theme: ThemeOverride = extendTheme({
   },
   colors: {
     bgColor: "#000",
-    txtColor: "#FFF",
-    primaryColor: "#FE9901",
-    secondaryColor: "#FFF",
-    accentColor: "#FE9901",
+    textColor: "#C9FF00",
+    primaryColor: "#C9FF00",
+    secondaryColor: "#FF0DA4",
+    accentColor: "#290DFF",
   },
   styles: {
     global: {
       body: {
         bg: "bgColor",
-        color: "txtColor",
+        color: "textColor",
         fontFamily: "body",
         overscrollBehavior: "none",
       },

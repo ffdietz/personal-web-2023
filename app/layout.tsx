@@ -3,8 +3,10 @@ import { ChakraProvider } from "@chakra-ui/react";
 import { Footer } from "@ui/components/footer";
 import { Navbar } from "@ui/components/navbar";
 
-import { ReactNode } from "react";
+import { ReactNode, useRef } from "react";
 import { theme } from "@theme/theme";
+
+import { navLinks } from "@constants";
 
 export default function RootLayout({
   children,
