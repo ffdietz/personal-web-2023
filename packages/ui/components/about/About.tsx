@@ -1,9 +1,13 @@
-import { Center, Heading, Stack } from "@chakra-ui/react";
+import { Center, Heading, Stack, Text } from "@chakra-ui/react";
+import { biography } from "@constants";
 
 export function About() {
   return (
-    <Stack id="about" w="100vw" h="100vh" border="1px">
-      <Heading as="h1">About</Heading>
+    <Stack id="about" w="100vw" h="100vh" border="1px" paddingTop={32}>
+      <Heading>About</Heading>
+      <Center>
+        <Text as="h1" w="lg">{biography}</Text>
+      </Center>
     </Stack>
   )
 }

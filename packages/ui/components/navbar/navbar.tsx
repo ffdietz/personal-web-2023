@@ -20,8 +20,9 @@ export function Navbar() {
   };
 
   return (
+    <Flex bg="bgColor" minWidth="100vw" minHeight={38} padding={8}>
     <Flex
-      bg="bgColor"
+      bg="transparent"
       justifyContent="space-between"
       minWidth="100vw"
       minH={32}
@@ -64,6 +65,7 @@ export function Navbar() {
           );
         })}
       </Flex>
+    </Flex>
     </Flex>
   );
 }
