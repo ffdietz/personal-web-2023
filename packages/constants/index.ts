@@ -107,7 +107,17 @@ export const experiences = [
     date: "2020 - 2021",
     points: [
       "Full-stack development according to customer requirements.",
-      "Project managing: testing, debugging, deployment, launch, maintenance and updates."
+      "Project managing: testing, debugging, deployment, launch, maintenance and updates.",
+    ],
+  },
+  {
+    title: "#GlaciarGrey",
+    company_name: "UltimaEsperanza Collective",
+    icon: "",
+    date: "2021",
+    points: [
+      "Full-stack development according to customer requirements.",
+      "Project managing: testing, debugging, deployment, launch, maintenance and updates.",
     ],
   },
   // {
@@ -121,4 +131,19 @@ export const experiences = [
 
 export const projects = [
 
+];
+
+export const contact = [
+  {
+    title: "email",
+    link: "felipefierrod@gmail.com",
+  },
+  {
+    title: "github",
+    link: "https://github.com/ffdietz",
+  },
+  {
+    title: "linkedin",
+    link: "https://www.linkedin.com/in/felipe-fierro-dietz/",
+  },
 ];

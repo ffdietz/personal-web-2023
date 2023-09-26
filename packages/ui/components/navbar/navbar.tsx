@@ -1,8 +1,6 @@
-import { useState } from "react";
-import { Box, Flex, Text } from "@chakra-ui/react";
+import { Box, Flex, Stack, Text } from "@chakra-ui/react";
 import Link from "next/link";
-import Logo from "../logo/Logo";
-
+import { useState } from "react";
 
 import { navLinks } from "@constants";
 
@@ -21,51 +19,39 @@ export function Navbar() {
 
   return (
     <Flex bg="bgColor" minWidth="100vw" minHeight={38} padding={8}>
-    <Flex
-      bg="transparent"
-      justifyContent="space-between"
-      minWidth="100vw"
-      minH={32}
-      position="fixed"
-      top={0}
-      px={28}
-      py={8}
-    >
-      <Box
-        cursor="pointer"
-        onClick={() => {
-          setActive("");
-          window.scrollTo({
-            top: 0,
-            behavior: 'smooth'
-          });
-        }}
+      <Stack
+        bg="transparent"
+        justifyContent="space-between"
+        minWidth="100vw"
+        minH={32}
+        position="fixed"
+        top={0}
+        px={28}
+        py={8}
       >
-        <Logo />
-      </Box>
-      <Flex gap={8}>
-        {navLinks.map((link) => {
-          return (
-            <Link
-              key={link.title}
-              href={`#${link.id}`}
-              onClick={(event) => {
-                handleScroll(event);
-                setActive(link.id);
-              }}
-            >
-              <Text
-                color={active === link.id ? "secondaryColor" : "textColor"}
-                fontSize={20}
-                textShadow="1px 1px accentColor"
+        <Flex gap={8}>
+          {navLinks.map((link) => {
+            return (
+              <Link
+                key={link.title}
+                href={`#${link.id}`}
+                onClick={(event) => {
+                  handleScroll(event);
+                  setActive(link.id);
+                }}
               >
-                {link.title}
-              </Text>
-            </Link>
-          );
-        })}
-      </Flex>
-    </Flex>
+                <Text
+                  color={active === link.id ? "secondaryColor" : "textColor"}
+                  fontSize={20}
+                  textShadow="1px 1px accentColor"
+                >
+                  {link.title}
+                </Text>
+              </Link>
+            );
+          })}
+        </Flex>
+      </Stack>
     </Flex>
   );
 }
