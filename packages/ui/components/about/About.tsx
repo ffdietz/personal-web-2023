@@ -6,10 +6,12 @@ export function About() {
     <Stack
       id="about"
       w="100vw"
-      h="100vh"
+      h="90vh"
+      justifyContent="center"
+      align="center"
     >
-      <Heading>About</Heading>
-      <Text w="lg" fontSize="4xl">
+      {/* <Heading>About</Heading> */}
+      <Text w="2xl" fontSize="2xl">
         {biography}
       </Text>
     </Stack>
