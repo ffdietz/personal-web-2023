@@ -11,7 +11,6 @@ export function About() {
       align="center"
       bg="red.900"
     >
-      {/* <Heading>About</Heading> */}
       <Text w="2xl" fontSize="2xl">
         {biography}
       </Text>

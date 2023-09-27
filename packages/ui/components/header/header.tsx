@@ -11,6 +11,7 @@ function Header() {
       py={14}
       px={24}
       justifyContent="space-between"
+      alignItems="center"
       onClick={() => {
         window.scrollTo({
           top: 0,

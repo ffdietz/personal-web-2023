@@ -1,25 +1,32 @@
-import { ListItem, Stack, Text, UnorderedList } from "@chakra-ui/react";
+import { Button, GridItem, ListItem, Stack, Text, UnorderedList } from "@chakra-ui/react";
+import { useState } from "react";
 
 export interface Experience {
   title: string,
-  company_name: string,
+  company: string,
   icon: string,
   date: string,
   points: string[]
 }
 
 export function WorkCard({experience}: {experience: Experience}) {
-  const { title, company_name, date, points } = experience;
+  const [isOpen, setIsOpen] = useState<boolean>(false)
+  const { title, company, date, points } = experience;
   return (
-    <Stack border="1px" color="red">
+    <Stack w="full" border="1px" color="red" padding={4}>
       <Text>{title}</Text>
-      <Text>{company_name}</Text>
+      <Text>{company}</Text>
       <Text>{date}</Text>
-      <UnorderedList>
-        {points && points.map((point)=> {
-          return <ListItem>{point}</ListItem>
-        })}
-      </UnorderedList>
+      <Button size="xs" w="2xs" onClick={() => setIsOpen(!isOpen)}>
+        {isOpen ? "less..." : "more..."}
+      </Button>
+      {isOpen && 
+        <UnorderedList>
+          {points && points.map((point)=> {
+            return <ListItem>{point}</ListItem>
+          })}
+        </UnorderedList>
+      }
     </Stack>
   );
 }
