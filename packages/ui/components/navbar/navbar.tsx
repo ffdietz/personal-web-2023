@@ -18,40 +18,32 @@ export function Navbar() {
   };
 
   return (
-    <Flex bg="bgColor" minWidth="100vw" minHeight={38} padding={8}>
       <Stack
-        bg="transparent"
-        justifyContent="space-between"
-        minWidth="100vw"
-        minH={32}
+        h="100vh"
         position="fixed"
-        top={0}
-        px={28}
-        py={8}
+        paddingLeft={24}
+        marginTop={44}
       >
-        <Flex gap={8}>
-          {navLinks.map((link) => {
-            return (
-              <Link
-                key={link.title}
-                href={`#${link.id}`}
-                onClick={(event) => {
-                  handleScroll(event);
-                  setActive(link.id);
-                }}
+        {navLinks.map((link) => {
+          return (
+            <Link
+              key={link.title}
+              href={`#${link.id}`}
+              onClick={(event) => {
+                handleScroll(event);
+                setActive(link.id);
+              }}
+            >
+              <Text
+                color={active === link.id ? "secondaryColor" : "textColor"}
+                fontSize={active === link.id ? 34 : 20}
+                textShadow="1px 1px accentColor"
               >
-                <Text
-                  color={active === link.id ? "secondaryColor" : "textColor"}
-                  fontSize={20}
-                  textShadow="1px 1px accentColor"
-                >
-                  {link.title}
-                </Text>
-              </Link>
-            );
-          })}
-        </Flex>
+                {link.title}
+              </Text>
+            </Link>
+          );
+        })}
       </Stack>
-    </Flex>
   );
 }
