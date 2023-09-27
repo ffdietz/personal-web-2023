@@ -1,6 +1,6 @@
 import { Box, Stack, Text } from '@chakra-ui/react'
 
-export default function Title() {
+export function Title() {
   return (
     <Stack>
       <Text fontFamily="" fontSize={32} fontWeight={500}>

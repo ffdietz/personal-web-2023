@@ -84,7 +84,7 @@ export const skills = [
 export const experiences = [
   {
     title: "Front-end Developer",
-    company_name: "Twelve x Twelve",
+    company: "Twelve x Twelve",
     icon: "",
     date: "2022 - 2023",
     points: [
@@ -95,14 +95,14 @@ export const experiences = [
   },
   {
     title: "Mobile App Developer Assistant",
-    company_name: "Amigo App",
+    company: "Amigo App",
     icon: "",
     date: "2022",
     points: ["UI implementations with React Native and Redux."],
   },
   {
     title: "Freelance Developer",
-    company_name: "",
+    company: "",
     icon: "",
     date: "2020 - 2021",
     points: [
@@ -112,7 +112,7 @@ export const experiences = [
   },
   {
     title: "#GlaciarGrey",
-    company_name: "UltimaEsperanza Collective",
+    company: "UltimaEsperanza Collective",
     icon: "",
     date: "2021",
     points: [
