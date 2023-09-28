@@ -1,5 +1,5 @@
-import { Button, GridItem, ListItem, Stack, Text, UnorderedList } from "@chakra-ui/react";
 import { useState } from "react";
+import { Button, ListItem, Stack, Text, UnorderedList } from "@chakra-ui/react";
 
 export interface Experience {
   title: string,

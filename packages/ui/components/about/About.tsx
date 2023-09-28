@@ -6,10 +6,9 @@ export function About() {
     <Stack
       id="about"
       w="100vw"
-      h="50vh"
+      h="70vh"
       justifyContent="center"
       align="center"
-      bg="red.900"
     >
       <Text w="2xl" fontSize="2xl">
         {biography}
