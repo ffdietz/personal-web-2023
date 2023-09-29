@@ -1,13 +1,6 @@
 import { useState } from "react";
 import { Button, ListItem, Stack, Text, UnorderedList } from "@chakra-ui/react";
-
-export interface Experience {
-  title: string,
-  company: string,
-  icon: string,
-  date: string,
-  points: string[]
-}
+import { Experience } from "@types";
 
 export function WorkCard({experience}: {experience: Experience}) {
   const [isOpen, setIsOpen] = useState<boolean>(false)
