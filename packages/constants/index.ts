@@ -1,3 +1,6 @@
+import { GithubIcon, LinkedinIcon, MailIcon} from "@ui/components/contact/icons";
+import { glaciar, recorder } from "../../public/assets";
+
 export const navLinks = [
   {
     id: "about",
@@ -85,7 +88,7 @@ export const experiences = [
   {
     title: "Front-end Developer",
     company: "Twelve x Twelve",
-    icon: "",
+    image: "",
     date: "2022 - 2023",
     points: [
       "Completed training program.",
@@ -96,14 +99,14 @@ export const experiences = [
   {
     title: "Mobile App Developer Assistant",
     company: "Amigo App",
-    icon: "",
+    image: "",
     date: "2022",
     points: ["UI implementations with React Native and Redux."],
   },
   {
     title: "Freelance Developer",
     company: "",
-    icon: "",
+    image: "",
     date: "2020 - 2021",
     points: [
       "Full-stack development according to customer requirements.",
@@ -113,7 +116,7 @@ export const experiences = [
   {
     title: "#GlaciarGrey",
     company: "UltimaEsperanza Collective",
-    icon: "",
+    image: glaciar,
     date: "2021",
     points: [
       "Full-stack development according to customer requirements.",
@@ -136,14 +139,17 @@ export const projects = [
 export const contact = [
   {
     title: "email",
-    link: "felipefierrod@gmail.com",
+    link: "mailto:felipefierrod@gmail.com",
+    icon: MailIcon,
   },
   {
     title: "github",
     link: "https://github.com/ffdietz",
+    icon: GithubIcon,
   },
   {
     title: "linkedin",
     link: "https://www.linkedin.com/in/felipe-fierro-dietz/",
+    icon: LinkedinIcon,
   },
 ];

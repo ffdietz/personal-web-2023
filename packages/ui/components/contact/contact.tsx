@@ -1,10 +1,26 @@
-import { Heading, Stack } from "@chakra-ui/react"
+import { Box, Flex, Icon } from "@chakra-ui/react"
+import { contact } from "@constants"
 
 
 export function Contact() {
   return (
-    <Stack id="contact" w="100vw" h="100vh" border="1px">
-        <Heading as="h1">Contact</Heading>
-    </Stack>
-  )
+    <Flex
+      id="contact"
+      w="100vw"
+      h="100vh"
+      justifyContent="center"
+      align="center"
+      gap={24}
+    >
+        {contact.map((item) => {
+          return (
+            <Box key={item.title}>
+              <a href={item.link}>
+                <Icon as={item.icon} boxSize={32} />
+              </a>
+            </Box>
+          );
+        })}
+    </Flex>
+  );
 }
