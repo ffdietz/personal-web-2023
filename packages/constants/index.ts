@@ -139,7 +139,7 @@ export const projects = [
 export const contact = [
   {
     title: "email",
-    link: "felipefierrod@gmail.com",
+    link: "mailto:felipefierrod@gmail.com",
     icon: MailIcon,
   },
   {
