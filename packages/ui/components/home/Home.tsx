@@ -6,8 +6,8 @@ import { Works } from "../works";
 export default function Home() {
   return (
     <>
-      <Hero />
-      <About />
+      {/* <Hero /> */}
+      {/* <About /> */}
       <Works />
       <Contact />
     </>

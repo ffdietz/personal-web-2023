@@ -88,7 +88,7 @@ export const experiences = [
   {
     title: "Front-end Developer",
     company: "Twelve x Twelve",
-    image: "",
+    image: undefined,
     date: "2022 - 2023",
     points: [
       "Completed training program.",
@@ -99,14 +99,14 @@ export const experiences = [
   {
     title: "Mobile App Developer Assistant",
     company: "Amigo App",
-    image: "",
+    image: undefined,
     date: "2022",
     points: ["UI implementations with React Native and Redux."],
   },
   {
     title: "Freelance Developer",
     company: "",
-    image: "",
+    image: undefined,
     date: "2020 - 2021",
     points: [
       "Full-stack development according to customer requirements.",
