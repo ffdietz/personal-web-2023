@@ -1,6 +1,6 @@
-import { Grid, Heading, Stack } from "@chakra-ui/react";
-import { experiences } from "@constants";
+import { Stack } from "@chakra-ui/react";
 import { WorkCard } from "./work-card";
+import { experiences } from "@constants";
 
 export function Works() {
   return (
@@ -13,7 +13,7 @@ export function Works() {
       margin="auto"
     >
         {experiences.map((experience) => {
-          return <WorkCard experience={experience} />;
+          return <WorkCard experience={experience} key={experience.title}/>;
         })}
     </Stack>
   );
