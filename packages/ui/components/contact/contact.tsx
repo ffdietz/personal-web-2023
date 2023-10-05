@@ -1,4 +1,4 @@
-import { Box, Flex, Heading, Icon, Image, Stack, Text } from "@chakra-ui/react"
+import { Box, Flex, Icon } from "@chakra-ui/react"
 import { contact } from "@constants"
 
 
@@ -10,13 +10,14 @@ export function Contact() {
       h="100vh"
       justifyContent="center"
       align="center"
-      gap={16}
+      gap={24}
     >
         {contact.map((item) => {
           return (
             <Box key={item.title}>
-              {/* <Text>{item.title}</Text> */}
-              <Icon as={item.icon} boxSize={64} />
+              <a href={item.link}>
+                <Icon as={item.icon} boxSize={32} />
+              </a>
             </Box>
           );
         })}
