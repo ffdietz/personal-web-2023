@@ -6,8 +6,18 @@ import { Experience } from "@types";
 export function WorkCard({experience}: {experience: Experience}) {
   const [isOpen, setIsOpen] = useState<boolean>(false)
   const { title, company, date, points, image } = experience;
+
   return (
-    <Stack w="full" border="1px" color="red" padding={4}>
+    <Stack
+      w="full"
+      border="1px"
+      color="red"
+      padding={4}
+      bgImage={`url(${image})`}
+      bgSize="contain"
+      bgRepeat="no-repeat"
+      bgPosition="right"
+    >
       <Text fontSize="24" lineHeight="1">
         {title}
       </Text>
