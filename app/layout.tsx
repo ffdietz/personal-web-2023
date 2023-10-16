@@ -1,10 +1,10 @@
 "use client";
-import { ReactNode } from "react";
 import { ChakraProvider } from "@chakra-ui/react";
-import { Footer } from "@ui/components/footer";
-import { Navbar } from "@ui/components/navbar";
+import { Footer } from "@components/footer";
+import Header from "@components/header/header";
+import { Navbar } from "@components/navbar";
 import { theme } from "@theme/theme";
-import Header from "@ui/components/header/header";
+import { ReactNode } from "react";
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
@@ -13,14 +13,12 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         <body>
           <ChakraProvider theme={theme}>
             <header>
-              <Header/>
+              <Header />
             </header>
             <nav>
               <Navbar />
             </nav>
-            <main>
-              {children}
-            </main>
+            <main>{children}</main>
             <footer>
               <Footer />
             </footer>

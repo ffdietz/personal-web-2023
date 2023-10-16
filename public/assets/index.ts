@@ -1,5 +1,6 @@
-import glaciar from './glaciar_grey.png'
-import recorder from './data_recorder.png'
+const glaciar = "/assets/glaciar_grey.png";
+const recorder = "/assets/data_recorder.png";
+const reader = "assets/data_reader.png";
 
 
-export { glaciar, recorder};
+export { glaciar, recorder, reader };

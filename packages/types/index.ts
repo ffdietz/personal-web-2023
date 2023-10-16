@@ -1,6 +1,6 @@
 import { StaticImageData } from "next/image";
 
-export interface Experience {
+export type Experience = {
   title: string;
   company: string;
   date: string;

@@ -1,4 +1,4 @@
-import { Heading, Stack, Text } from "@chakra-ui/react";
+import { Stack, Text } from "@chakra-ui/react";
 import { biography } from "@constants";
 
 export function About() {
@@ -6,9 +6,11 @@ export function About() {
     <Stack
       id="about"
       w="100vw"
-      h="70vh"
+      h="100vh"
       justifyContent="center"
       align="center"
+      border="1px"
+      borderColor={"red"}
     >
       <Text w="2xl" fontSize="2xl">
         {biography}
