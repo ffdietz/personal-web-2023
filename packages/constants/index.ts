@@ -1,5 +1,5 @@
 import { GithubIcon, LinkedinIcon, MailIcon } from "@components/contact/icons";
-import { glaciar, reader, recorder } from "../../public/assets";
+import { amigo, glaciar, reader, recorder, stack, twelve } from "../../public/assets";
 
 export const navLinks = [
   {
@@ -96,7 +96,7 @@ export const experiences = [
   {
     title: "Front-end Developer",
     company: "Twelve x Twelve",
-    image: undefined,
+    image: twelve,
     date: "2022 - 2023",
     points: [
       "Completed training program.",
@@ -107,14 +107,14 @@ export const experiences = [
   {
     title: "Mobile App Developer Assistant",
     company: "Amigo App",
-    image: undefined,
+    image: amigo,
     date: "2022",
     points: ["UI implementations with React Native and Redux."],
   },
   {
     title: "Freelance Developer",
     company: "",
-    image: undefined,
+    image: stack,
     date: "2020 - 2021",
     points: [
       "Full-stack development according to customer requirements.",

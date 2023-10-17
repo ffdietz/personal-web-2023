@@ -6,13 +6,13 @@ export function Title() {
       <Text
         w={"auto"}
         fontFamily=""
-        fontSize={24}
+        fontSize={44}
         fontWeight={500}
         lineHeight="0.75"
         textTransform="uppercase"
         // whiteSpace={"break-spaces"}
       >
-        Felipe Fierro Dietz
+        FFD
       </Text>
       <Text fontFamily="" fontSize={18} marginLeft="auto" lineHeight={0.1}>
         developer

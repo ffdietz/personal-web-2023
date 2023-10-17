@@ -9,13 +9,13 @@ export function WorkCard({experience}: {experience: Experience}) {
 
   return (
     <GridItem
-      w={96}
+      w={80}
       h={isOpen ? "auto" : 48}
       color="secondaryColor"
       padding={4}
       bgImage={`url(${image})`}
-      bgBlendMode="difference"
-      bgColor="rgba(201, 255, 0, 0.9)"
+      bgBlendMode="color-burn"
+      bgColor="rgba(0, 0, 0, 0.8)"
       bgSize={isOpen ? "cover" : "contain"}
       bgRepeat="no-repeat"
       bgPosition="center"
