@@ -9,8 +9,6 @@ export function About() {
       h="100vh"
       justifyContent="center"
       align="center"
-      border="1px"
-      borderColor={"red"}
     >
       <Text w="2xl" fontSize="2xl">
         {biography}
