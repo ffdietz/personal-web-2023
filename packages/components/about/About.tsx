@@ -1,5 +1,5 @@
 import { Stack, Text } from "@chakra-ui/react";
-import { biography } from "@constants";
+import { biography } from "@content";
 
 export function About() {
   return (

@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Button, GridItem, ListItem, Stack, Text, UnorderedList } from "@chakra-ui/react";
+import { GridItem, ListItem, Text, UnorderedList } from "@chakra-ui/react";
 import { Experience } from "@types";
 
 
@@ -14,15 +14,18 @@ export function WorkCard({experience}: {experience: Experience}) {
       color="secondaryColor"
       padding={4}
       bgImage={`url(${image})`}
+      bgColor="rgba(0, 0, 0, 0.6)"
       bgBlendMode="color-burn"
-      bgColor="rgba(0, 0, 0, 0.8)"
-      bgSize={isOpen ? "cover" : "contain"}
       bgRepeat="no-repeat"
       bgPosition="center"
+      bgSize={isOpen ? "cover" : "contain"}
       cursor="pointer"
       onClick={() => setIsOpen(!isOpen)}
     >
-      <Text fontSize={32} lineHeight="1">
+      <Text
+        fontSize={32}
+        lineHeight="1"
+      >
         {title}
       </Text>
       <Text lineHeight="1">{company}</Text>
