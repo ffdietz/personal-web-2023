@@ -1,8 +1,8 @@
-import { Box, Flex, Stack, Text } from "@chakra-ui/react";
+import { Stack, Text } from "@chakra-ui/react";
 import Link from "next/link";
 import { useState } from "react";
 
-import { navLinks } from "@constants";
+import { navLinks } from "@content";
 
 export function Navbar() {
   const [active, setActive] = useState<string | null>(null);
@@ -18,32 +18,27 @@ export function Navbar() {
   };
 
   return (
-      <Stack
-        h="100vh"
-        position="fixed"
-        paddingLeft={24}
-        marginTop={44}
-      >
-        {navLinks.map((link) => {
-          return (
-            <Link
-              key={link.title}
-              href={`#${link.id}`}
-              onClick={(event) => {
-                handleScroll(event);
-                setActive(link.id);
-              }}
+    <Stack h="100vh" position="fixed" paddingLeft={24} marginTop={44}>
+      {navLinks.map((link) => {
+        return (
+          <Link
+            key={link.title}
+            href={`#${link.id}`}
+            onClick={(event) => {
+              handleScroll(event);
+              setActive(link.id);
+            }}
+          >
+            <Text
+              color={active === link.id ? "secondaryColor" : "textColor"}
+              fontSize={active === link.id ? 34 : 20}
+              textShadow="1px 1px accentColor"
             >
-              <Text
-                color={active === link.id ? "secondaryColor" : "textColor"}
-                fontSize={active === link.id ? 34 : 20}
-                textShadow="1px 1px accentColor"
-              >
-                {link.title}
-              </Text>
-            </Link>
-          );
-        })}
-      </Stack>
+              {link.title}
+            </Text>
+          </Link>
+        );
+      })}
+    </Stack>
   );
 }

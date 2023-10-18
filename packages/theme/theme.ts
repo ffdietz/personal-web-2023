@@ -1,16 +1,17 @@
 import { ThemeOverride, extendTheme } from '@chakra-ui/react'
+import { openSans } from './fonts/fonts';
 
 export const theme: ThemeOverride = extendTheme({
   fonts: {
-    heading: `'Open Sans', sans-serif`,
-    body: `'Raleway', sans-serif`,
+    heading: openSans.style.fontFamily,
+    body: openSans.style.fontFamily,
   },
   colors: {
     bgColor: "#000",
     textColor: "#C9FF00",
     primaryColor: "#C9FF00",
     secondaryColor: "#FF0DA4",
-    accentColor: "#290DFF",
+    accentColor: "#5B0DFF",
   },
   styles: {
     global: {
