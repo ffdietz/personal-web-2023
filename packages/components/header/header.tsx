@@ -11,6 +11,7 @@ function Header() {
       alignItems="center"
       py={14}
       px={24}
+      zIndex={-1}
     >
       <Box
         cursor="pointer"
@@ -21,7 +22,7 @@ function Header() {
           });
         }}
       >
-        <Logo />
+        <Title />
       </Box>
       <Box
         cursor="pointer"
@@ -32,7 +33,7 @@ function Header() {
           });
         }}
       >
-        <Title />
+        <Logo />
       </Box>
     </Flex>
   );

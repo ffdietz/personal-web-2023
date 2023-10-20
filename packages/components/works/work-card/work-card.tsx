@@ -1,6 +1,7 @@
 import { useState } from "react";
-import { GridItem, ListItem, Text, UnorderedList } from "@chakra-ui/react";
+import { Box, GridItem, ListItem, Stack, Text, UnorderedList } from "@chakra-ui/react";
 import { Experience } from "@types";
+import { AnimatePresence, motion } from "framer-motion";
 
 
 export function WorkCard({experience}: {experience: Experience}) {
@@ -9,38 +10,82 @@ export function WorkCard({experience}: {experience: Experience}) {
 
   return (
     <GridItem
+      as={motion.div}
+      animate={{
+        backgroundSize: isOpen ? "150%" : "60%",
+        backgroundColor: isOpen ? "rgba(0, 0, 0, 0.1)" : "rgba(0, 0, 0, 0.7)",
+      }}
       w={80}
-      h={isOpen ? "auto" : 48}
       color="secondaryColor"
-      padding={4}
       bgImage={`url(${image})`}
-      bgColor="rgba(0, 0, 0, 0.6)"
-      bgBlendMode="color-burn"
+      bgBlendMode="color"
       bgRepeat="no-repeat"
-      bgPosition="center"
-      bgSize={isOpen ? "cover" : "contain"}
+      // bgPosition={isOpen ? "center" : "top"}
+      bgPosition="top"
+      backdropFilter="auto"
       cursor="pointer"
       onClick={() => setIsOpen(!isOpen)}
     >
-      <Text
-        fontSize={32}
-        lineHeight="1"
+      <Stack
+        as={motion.div}
+        animate={{ backdropFilter: isOpen ? "blur(6px)" : "blur(0px)" }}
+        w="full"
+        h="full"
+        padding={8}
       >
-        {title}
-      </Text>
-      <Text lineHeight="1">{company}</Text>
-      <Text>{date}</Text>
-      <Text size="xs" w="2xs">
-        {isOpen ? "less..." : "info"}
-      </Text>
-      {isOpen && (
-        <UnorderedList>
-          {points &&
-            points.map((point) => {
-              return <ListItem color="secondaryColor">{point}</ListItem>;
-            })}
-        </UnorderedList>
-      )}
+        <Text fontSize={32} lineHeight="1">
+          {title}
+        </Text>
+        <Text lineHeight="1">{company}</Text>
+        <Text>{date}</Text>
+        <AnimatePresence>
+          {isOpen && (
+            <UnorderedList>
+              {points &&
+                points.map((point) => {
+                  return (
+                    <ListItem
+                      as={motion.li}
+                      initial={{
+                        opacity: 0,
+                        height: 0,
+                      }}
+                      exit={{
+                        height: 0,
+                        opacity: 0,
+                        transition: {
+                          height: {
+                            duration: 0.6,
+                            delay: 0.2,
+                          },
+                          opacity: {
+                            duration: 0.2,
+                          },
+                        },
+                      }}
+                      animate={{
+                        height: "auto",
+                        opacity: 1,
+                        transition: {
+                          height: {
+                            duration: 0.5,
+                          },
+                          opacity: {
+                            duration: 0.4,
+                            delay: 0.3,
+                          },
+                        },
+                      }}
+                      color="secondaryColor"
+                    >
+                      {point}
+                    </ListItem>
+                  );
+                })}
+            </UnorderedList>
+          )}
+        </AnimatePresence>
+      </Stack>
     </GridItem>
   );
 }

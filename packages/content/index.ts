@@ -1,5 +1,14 @@
 import { GithubIcon, LinkedinIcon, MailIcon } from "@components/contact/icons";
-import { amigo, glaciar, hardware, reader, recorder, stack, twelve, workshop } from "../../public/assets";
+import {
+  amigo,
+  fullstack,
+  glaciar,
+  hardware,
+  reader,
+  recorder,
+  twelve,
+  workshop,
+} from "../../public/assets";
 
 export const navLinks = [
   {
@@ -16,12 +25,16 @@ export const navLinks = [
   },
 ];
 
-export const hero = "";
+export const heroText = "Hero lorem, ipsum dolor sit amet consectetur adipisicing elit.";
 
-export const biography =
-  "Hello, my name is Felipe. I'm an visual artist and developer, currently expanding my world wide web frontiers. I have strong skills to bring great ideas in to real world, my background in field technological artworks and now i'm looking for a place to do great things to the internet.";
+export const aboutText = `Hello, my name is Felipe.
+  I'm an visual artist and developer,
+  currently expanding my world wide web frontiers.
+  I have strong skills to bring great ideas in to real world, 
+  my background in field technological artworks and now
+  i'm looking for a place to do great things to the internet.`;
 
-export const technologies = [
+  export const technologies = [
   {
     name: "HTML 5",
     icon: undefined,
@@ -123,7 +136,7 @@ export const experiences = [
   {
     title: "Freelance Full-Stack  Developer",
     company: "",
-    image: stack,
+    image: fullstack,
     date: "2021 -",
     points: [
       "Full-stack development according to customer requirements.",

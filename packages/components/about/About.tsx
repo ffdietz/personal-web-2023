@@ -1,5 +1,5 @@
 import { Stack, Text } from "@chakra-ui/react";
-import { biography } from "@content";
+import { aboutText } from "@content";
 
 export function About() {
   return (
@@ -11,7 +11,7 @@ export function About() {
       align="center"
     >
       <Text w="2xl" fontSize="2xl">
-        {biography}
+        {aboutText}
       </Text>
     </Stack>
   );
