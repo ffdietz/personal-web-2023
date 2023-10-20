@@ -18,7 +18,7 @@ export function Navbar() {
   };
 
   return (
-    <Stack h="100vh" position="fixed" paddingLeft={24} marginTop={44}>
+    <Stack h="100vh" position="fixed" paddingLeft={20} marginTop={72}>
       {navLinks.map((link) => {
         return (
           <Link
@@ -32,7 +32,7 @@ export function Navbar() {
             <Text
               color={active === link.id ? "secondaryColor" : "textColor"}
               fontSize={active === link.id ? 34 : 20}
-              textShadow="1px 1px accentColor"
+              textAlign="right"
             >
               {link.title}
             </Text>
