@@ -3,7 +3,7 @@ import { Open_Sans } from 'next/font/google'
 
 export const relayLight = localFont({
   src: './Relay-Light.woff2',
-  weight: '300',
+  weight: '400',
 })
 
 export const openSans = Open_Sans({

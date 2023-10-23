@@ -1,7 +1,7 @@
 import { useState } from "react";
-import { GridItem, ListItem, Stack, Text, UnorderedList } from "@chakra-ui/react";
+import { motion, AnimatePresence } from "framer-motion";
+import { GridItem, Heading, ListItem, Stack, Text, UnorderedList } from "@chakra-ui/react";
 import { Experience } from "@types";
-import { AnimatePresence, motion } from "framer-motion";
 
 
 export function WorkCard({experience}: {experience: Experience}) {
@@ -32,11 +32,13 @@ export function WorkCard({experience}: {experience: Experience}) {
         h="full"
         padding={8}
       >
-        <Text fontSize={32} lineHeight="1">
+        <Heading fontSize={32} lineHeight="1">
           {title}
+        </Heading>
+        <Text fontSize={22} lineHeight="0.5">
+          {company}
         </Text>
-        <Text lineHeight="1">{company}</Text>
-        <Text>{date}</Text>
+        <Text fontSize={18}>{date}</Text>
         <AnimatePresence>
           {isOpen && (
             <UnorderedList>
