@@ -1,6 +1,6 @@
+import { useState } from "react";
 import { Stack, Text } from "@chakra-ui/react";
 import Link from "next/link";
-import { useState } from "react";
 
 import { navLinks } from "@content";
 
@@ -11,14 +11,15 @@ export function Navbar() {
     e.preventDefault();
     const targetId = e.currentTarget.href.replace(/.*\#/, "");
     const section = document.getElementById(targetId);
+    const offset = section?.getBoundingClientRect().top || 0;
     window.scrollTo({
-      top: section?.getBoundingClientRect().top,
+      top: window.scrollY + offset,
       behavior: "smooth",
     });
   };
 
   return (
-    <Stack h="100vh" position="fixed" paddingLeft={20} marginTop={72}>
+    <Stack w={48} h="100vh" position="fixed" paddingLeft={20} marginTop={72}>
       {navLinks.map((link) => {
         return (
           <Link
