@@ -1,43 +1,51 @@
-import { useState } from "react";
-import { Stack, Text } from "@chakra-ui/react";
-import Link from "next/link";
-
-import { navLinks } from "@content";
+import { Stack } from "@chakra-ui/react";
+import { sections } from "@content";
+import { useEffect, useState } from "react";
+import { NavLink } from "./nav-link";
 
 export function Navbar() {
-  const [active, setActive] = useState<string | null>(null);
+  const [activeSection, setActiveSection] = useState<string | null>(null);
 
-  const handleScroll = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
-    e.preventDefault();
-    const targetId = e.currentTarget.href.replace(/.*\#/, "");
-    const section = document.getElementById(targetId);
-    const offset = section?.getBoundingClientRect().top || 0;
-    window.scrollTo({
-      top: window.scrollY + offset,
-      behavior: "smooth",
+  useEffect(() => {
+    const observerOptions: IntersectionObserverInit = {
+      root: null,
+      threshold: 0.5,
+    };
+
+    const observerCallback: IntersectionObserverCallback = (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          setActiveSection(entry.target.id);
+        }
+      });
+    };
+
+    const observer = new IntersectionObserver(
+      observerCallback,
+      observerOptions
+    );
+
+    const sections = document.querySelectorAll("section");
+    sections.forEach((section) => {
+      observer.observe(section);
     });
-  };
+
+    return () => {
+      sections.forEach((section) => {
+        observer.unobserve(section);
+      });
+    };
+  }, []);
 
   return (
     <Stack w={48} h="100vh" position="fixed" paddingLeft={20} marginTop={72}>
-      {navLinks.map((link) => {
+      {sections.map((link) => {
         return (
-          <Link
+          <NavLink
+            link={link}
+            isActive={activeSection === link.id}
             key={link.title}
-            href={`#${link.id}`}
-            onClick={(event) => {
-              handleScroll(event);
-              setActive(link.id);
-            }}
-          >
-            <Text
-              color={active === link.id ? "secondaryColor" : "textColor"}
-              fontSize={active === link.id ? 34 : 20}
-              textAlign="right"
-            >
-              {link.title}
-            </Text>
-          </Link>
+          />
         );
       })}
     </Stack>
