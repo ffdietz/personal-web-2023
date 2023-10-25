@@ -10,7 +10,7 @@ import {
   workshop,
 } from "../../public/assets";
 
-export const navLinks = [
+export const sections = [
   {
     id: "about",
     title: "About",
@@ -25,7 +25,8 @@ export const navLinks = [
   },
 ];
 
-export const heroText = "Hero lorem, ipsum dolor sit amet consectetur adipisicing elit.";
+export const heroText =
+  "Hero lorem, ipsum dolor sit amet consectetur adipisicing elit.";
 
 export const aboutText = `Hello, my name is Felipe.
   I'm an visual artist and developer,
@@ -34,7 +35,7 @@ export const aboutText = `Hello, my name is Felipe.
   my background in field technological artworks and now
   i'm looking for a place to do great things to the internet.`;
 
-  export const technologies = [
+export const technologies = [
   {
     name: "HTML 5",
     icon: undefined,
