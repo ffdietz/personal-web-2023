@@ -1,15 +1,20 @@
-import { About } from "../about";
-import { Contact } from "../contact";
-import { Hero } from "../hero";
-import { Works } from "../works";
+import { Flex, Stack } from "@chakra-ui/react";
+import { About } from "@components/about";
+import { Contact } from "@components/contact";
+import { Hero } from "@components/hero";
+import { Navbar } from "@components/navbar";
+import { Works } from "@components/works";
 
-export default function Home() {
+export function Home() {
   return (
-    <>
-      <Hero />
-      <About />
-      <Works />
-      <Contact />
-    </>
+    <Flex>
+      <Navbar />
+      <Stack gap={0}>
+        <Hero />
+        <About />
+        <Works />
+        <Contact />
+      </Stack>
+    </Flex>
   );
 }

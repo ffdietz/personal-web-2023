@@ -1,6 +1,6 @@
 import Link from "next/link";
-import { Text } from "@chakra-ui/react";
 import { motion } from "framer-motion";
+import { Text } from "@chakra-ui/react";
 import { TLink } from '@types';
 
 export function NavLink({ link, isActive }:{ link: TLink, isActive: boolean }) {
@@ -20,8 +20,10 @@ export function NavLink({ link, isActive }:{ link: TLink, isActive: boolean }) {
     >
       <Text
         as={motion.span}
-        color={isActive ? "secondaryColor" : "textColor"}
-        fontSize={isActive ? 34 : 20}
+        animate={{
+          color: isActive ? "#FF0DA4" : "#C9FF00",
+          fontSize: isActive ? "4rem" : "1.5rem",
+        }}
         textAlign="right"
       >
         {link.title}
