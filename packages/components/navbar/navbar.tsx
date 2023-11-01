@@ -38,7 +38,7 @@ export function Navbar() {
   }, []);
 
   return (
-    <Stack w={48} h="100vh" position="fixed" paddingLeft={20} marginTop={72}>
+    <Stack w={48} h="100vh" position="fixed" paddingLeft={20} marginTop={72} zIndex={1}>
       {sections.map((link) => {
         return (
           <NavLink

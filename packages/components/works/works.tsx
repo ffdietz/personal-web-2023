@@ -9,7 +9,7 @@ export function Works() {
       <Stack id="works" justifyContent="center" alignItems="center" h="100vh">
         <Grid templateColumns="repeat(3, 1fr)" rowGap={6} columnGap={1}>
           {experiences.map((experience) => {
-            return <WorkCard experience={experience} key={experience.title} />;
+            return <WorkCard experience={experience} key={experience.title} />
           })}
         </Grid>
       </Stack>
