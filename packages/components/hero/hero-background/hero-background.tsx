@@ -1,7 +1,6 @@
 import { useRef } from "react";
 import { Canvas, useFrame } from "@react-three/fiber";
 import { Mesh } from "three";
-import { MutableRefObject } from "react";
 
 function HeroThreeContent() {
   const ref = useRef<Mesh>(null);

@@ -2,6 +2,7 @@ import { Stack } from "@chakra-ui/react";
 import { sections } from "@content";
 import { useEffect, useState } from "react";
 import { NavLink } from "./nav-link";
+import { Resume } from "@components/resume";
 
 export function Navbar() {
   const [activeSection, setActiveSection] = useState<string | null>(null);
@@ -38,16 +39,25 @@ export function Navbar() {
   }, []);
 
   return (
-    <Stack w={48} h="100vh" position="fixed" paddingLeft={20} marginTop={72} zIndex={1}>
-      {sections.map((link) => {
-        return (
-          <NavLink
-            link={link}
-            isActive={activeSection === link.id}
-            key={link.title}
-          />
-        );
-      })}
+    <Stack
+      w={44}
+      h="65vh"
+      position="fixed"
+      zIndex={1}
+      marginTop={60}
+      textAlign="right"
+      justifyContent="space-between"
+    >
+      <Stack>
+        {sections.map((link) => 
+            <NavLink
+              link={link}
+              isActive={activeSection === link.id}
+              key={link.title}
+            />
+        )}
+      </Stack>
+      <Resume />
     </Stack>
   );
 }

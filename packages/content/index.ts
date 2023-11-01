@@ -1,11 +1,22 @@
 import { GithubIcon, LinkedinIcon, MailIcon } from "@components/contact/icons";
 import {
   amigo,
+  css,
+  framer,
   fullstack,
+  git,
   glaciar,
+  graph,
   hardware,
+  html,
+  js,
+  next,
+  node,
+  react,
   reader,
   recorder,
+  three,
+  ts,
   twelve,
   workshop,
 } from "../../public/assets";
@@ -37,44 +48,48 @@ export const aboutText = `Hello, my name is Felipe.
 
 export const technologies = [
   {
-    name: "HTML 5",
-    icon: undefined,
+    name: "HTML5",
+    icon: html,
   },
   {
-    name: "CSS 3",
-    icon: undefined,
+    name: "CSS3",
+    icon: css,
   },
   {
     name: "Javascript",
-    icon: undefined,
+    icon: js,
   },
   {
     name: "Typescript",
-    icon: undefined,
+    icon: ts,
   },
   {
     name: "React JS",
-    icon: undefined,
+    icon: react,
   },
   {
     name: "Node JS",
-    icon: undefined,
+    icon: node,
   },
   {
     name: "Next JS",
-    icon: undefined,
+    icon: next,
   },
   {
     name: "Graph QL",
-    icon: undefined,
-  },
-  {
-    name: "Git",
-    icon: undefined,
+    icon: graph,
   },
   {
     name: "Framer Motion",
-    icon: undefined,
+    icon: framer,
+  },
+  {
+    name: "Three JS",
+    icon: three,
+  },
+  {
+    name: "Git",
+    icon: git,
   },
 ];
 
