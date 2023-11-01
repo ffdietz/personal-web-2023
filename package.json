@@ -21,10 +21,12 @@
     "eslint-config-next": "13.4.2",
     "framer-motion": "^10.12.10",
     "next": "13.4.2",
-    "personal-web-v2": "link:",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "three": "^0.153.0",
     "typescript": "5.0.4"
+  },
+  "devDependencies": {
+    "@types/three": "^0.158.0"
   }
 }
