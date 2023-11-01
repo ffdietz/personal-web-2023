@@ -6,7 +6,7 @@ import { HeroBackground } from "./hero-background";
 export function Hero() {
   return (
     <Section id="#">
-      <Stack w="100vw" h="100vh" position="relative" zIndex={0} top={0}>
+      <Stack w="100vw" h="150vh" position="relative" zIndex={0} top={0}>
         <HeroBackground />
       </Stack>
       <Stack

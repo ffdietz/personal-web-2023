@@ -1,6 +1,5 @@
 import { Box, Flex } from '@chakra-ui/react'
 import { Title } from '../title'
-import { Logo } from '../logo';
 
 export function Header() {
   function scrollToTop () {
@@ -21,9 +20,6 @@ export function Header() {
     >
       <Box cursor="pointer" onClick={scrollToTop}>
         <Title />
-      </Box>
-      <Box cursor="pointer" onClick={scrollToTop}>
-        <Logo />
       </Box>
     </Flex>
   );

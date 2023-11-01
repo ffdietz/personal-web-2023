@@ -9,7 +9,7 @@ export function About() {
     <Section id={id}>
       <Stack
         w="100vw"
-        h="90vh"
+        h="60vh"
         justifyContent="center"
         align="center"
       >
