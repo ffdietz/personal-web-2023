@@ -1,7 +1,7 @@
 import { Stack, Text } from "@chakra-ui/react";
 import { Section } from "@components/section";
 import { heroText } from "@content";
-import { HeroBackground } from "./hero-background";
+import { HeroBackground } from "../hero-background";
 
 export function Hero() {
   return (
@@ -9,17 +9,18 @@ export function Hero() {
       <Stack w="100vw" h="150vh" position="relative" zIndex={0} top={0}>
         <HeroBackground />
       </Stack>
-      <Stack
+      <Text
         position="absolute"
-        bg="transparent"
         zIndex={1}
-        top="50vh"
-        left="50vw"
+        top={96}
+        right={56}
+        fontSize="4xl"
+        fontWeight="bold"
+        textTransform="uppercase"
+        blendMode="difference"
       >
-        <Text w="sm" fontSize="4xl">
-          {heroText}
-        </Text>
-      </Stack>
+        {heroText}
+      </Text>
     </Section>
   );
 }

@@ -1,4 +1,4 @@
-import { GithubIcon, LinkedinIcon, MailIcon } from "@components/contact/icons";
+import { GithubIcon, LinkedinIcon, MailIcon } from "@theme/icons";
 import {
   amigo,
   css,
@@ -36,8 +36,7 @@ export const sections = [
   },
 ];
 
-export const heroText =
-  "Hero lorem, ipsum dolor sit amet consectetur adipisicing elit.";
+export const heroText = "Creating with code";
 
 export const aboutText = `Hello, my name is Felipe.
   I'm an visual artist and developer,

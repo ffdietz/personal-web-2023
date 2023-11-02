@@ -1,6 +1,6 @@
 import { Grid, Stack } from "@chakra-ui/react";
 import { Section } from "@components/section";
-import { WorkCard } from "./work-card";
+import { WorkCard } from "../work-card";
 import { experiences, sections } from "@content";
 
 export function Works() {

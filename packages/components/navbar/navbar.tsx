@@ -1,11 +1,20 @@
-import { Stack } from "@chakra-ui/react";
-import { sections } from "@content";
 import { useEffect, useState } from "react";
-import { NavLink } from "./nav-link";
+import { Box, Stack } from "@chakra-ui/react";
+import { NavLink } from "../navlink";
 import { Resume } from "@components/resume";
+import { sections } from "@content";
+import { Logo } from "@components/logo";
+import { TLink } from "@types";
 
 export function Navbar() {
   const [activeSection, setActiveSection] = useState<string | null>(null);
+
+  function scrollToTop() {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  }
 
   useEffect(() => {
     const observerOptions: IntersectionObserverInit = {
@@ -41,21 +50,25 @@ export function Navbar() {
   return (
     <Stack
       w={44}
-      h="65vh"
+      h="100vh"
+      py={14}
+      my="auto"
       position="fixed"
       zIndex={1}
-      marginTop={60}
       textAlign="right"
       justifyContent="space-between"
     >
+      <Box cursor="pointer" onClick={scrollToTop}>
+        <Logo />
+      </Box>
       <Stack>
-        {sections.map((link) => 
-            <NavLink
-              link={link}
-              isActive={activeSection === link.id}
-              key={link.title}
-            />
-        )}
+        {sections.map((link: TLink) => (
+          <NavLink
+            key={link.title}
+            link={link}
+            isActive={activeSection === link.id}
+          />
+        ))}
       </Stack>
       <Resume />
     </Stack>

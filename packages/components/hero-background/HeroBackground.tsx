@@ -8,14 +8,14 @@ function HeroThreeContent() {
   useFrame(() => {
     if (ref && ref.current) {
       ref.current.rotation.x += 0.001;
-      ref.current.rotation.y += -0.001;
+      ref.current.rotation.y += -0.0009;
     }
   });
 
   return (
     <mesh ref={ref}>
-      <sphereGeometry args={[10, 2, 3]} />
-      <meshBasicMaterial color="green" wireframe />
+      <sphereGeometry args={[30, 3, 500]} />
+      <meshBasicMaterial color="grey" wireframe/>
     </mesh>
   );
 }
