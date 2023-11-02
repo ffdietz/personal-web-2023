@@ -3,14 +3,18 @@ import { motion } from "framer-motion";
 import { Text } from "@chakra-ui/react";
 import { TLink } from '@types';
 
-export function NavLink({ link, isActive }:{ link: TLink, isActive: boolean }) {
-
+export function NavLink({
+  link,
+  isActive,
+  }:{
+  link: TLink;
+  isActive: boolean;
+  }) { 
   return (
     <Link
       key={link.title}
       href={`#${link.id}`}
       scroll={false}
-      passHref
       onClick={(event) => {
         event.preventDefault();
         document

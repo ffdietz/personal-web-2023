@@ -1,4 +1,4 @@
-import { Center, Flex, Image, Stack, Text } from "@chakra-ui/react";
+import { Flex, Image, Stack,} from "@chakra-ui/react";
 import { technologies } from "@content";
 
 export function Technologies() {
@@ -8,8 +8,8 @@ export function Technologies() {
         w="50vw"
         h="30vh"
         wrap="wrap"
-        justifyContent="center"
         align="center"
+        justifyContent="center"
         gap={8}
       >
         {technologies.map((tech) => 

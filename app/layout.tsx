@@ -2,8 +2,8 @@
 import { ReactNode } from "react";
 import { ChakraProvider } from "@chakra-ui/react";
 import { Footer } from "@components/footer";
-import { Header } from "@components/header/header";
 import { theme } from "@theme/theme";
+import { Navbar } from "@components/navbar";
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
@@ -11,9 +11,9 @@ export default function RootLayout({ children }: { children: ReactNode }) {
       <html lang="en">
         <body>
           <ChakraProvider theme={theme}>
-            <header>
-              <Header />
-            </header>
+            <nav>
+              <Navbar />
+            </nav>
             <main>{children}</main>
             <footer>
               <Footer />
