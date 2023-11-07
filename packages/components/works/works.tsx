@@ -8,13 +8,18 @@ export function Works() {
 
   return (
     <Section id={id}>
-      <Stack justifyContent="center" alignItems="center" h="100vh">
-        <Grid templateColumns="repeat(3, 1fr)" rowGap={6} columnGap={1}>
-          {experiences.map((experience) => (
-            <WorkCard experience={experience} key={experience.title} />
-          ))}
-        </Grid>
-      </Stack>
+      <Grid
+        templateColumns="repeat(3, 1fr)"
+        rowGap={6}
+        columnGap={1}
+        py={16}
+        px={14}
+        ml="auto"
+      >
+        {experiences.map((experience) => (
+          <WorkCard experience={experience} key={experience.title} />
+        ))}
+      </Grid>
     </Section>
   );
 }

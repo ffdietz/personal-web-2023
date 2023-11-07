@@ -4,7 +4,12 @@ import Link from "next/link";
 export function Resume() {
   return (
     <Link href="/FelipeFierro-Developer2023.pdf" locale={false}>
-      <Button colorScheme="teal" variant="outline">
+      <Button
+        size="lg"
+        colorScheme="teal"
+        variant="outline"
+        borderRadius="full"
+      >
         CV
       </Button>
     </Link>

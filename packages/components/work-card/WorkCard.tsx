@@ -1,6 +1,6 @@
 import { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
 import { GridItem, Heading, ListItem, Stack, Text, UnorderedList } from "@chakra-ui/react";
+import { motion, AnimatePresence } from "framer-motion";
 import { Experience } from "@types";
 
 
@@ -12,15 +12,16 @@ export function WorkCard({experience}: {experience: Experience}) {
     <GridItem
       as={motion.div}
       animate={{
-        backgroundSize: isOpen ? "150%" : "60%",
+        backgroundSize: isOpen ? "150%" : "80%",
         backgroundColor: isOpen ? "rgba(0, 0, 0, 0.1)" : "rgba(0, 0, 0, 0.7)",
       }}
-      w={80}
+      w="sm"
+      h="xs"
       color="secondaryColor"
       bgImage={`url(${image})`}
       bgBlendMode="color"
       bgRepeat="no-repeat"
-      bgPosition="top"
+      bgPosition="center"
       backdropFilter="auto"
       cursor="pointer"
       onClick={() => setIsOpen(!isOpen)}
@@ -30,7 +31,7 @@ export function WorkCard({experience}: {experience: Experience}) {
         animate={{ backdropFilter: isOpen ? "blur(6px)" : "blur(0px)" }}
         w="full"
         h="full"
-        padding={8}
+        padding={4}
       >
         <Heading fontSize={32} lineHeight="1">
           {title}

@@ -1,4 +1,4 @@
-import { Flex, Stack } from "@chakra-ui/react";
+import { Stack } from "@chakra-ui/react";
 import { About } from "@components/about";
 import { Contact } from "@components/contact";
 import { Hero } from "@components/hero";
