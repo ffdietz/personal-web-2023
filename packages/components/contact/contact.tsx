@@ -7,7 +7,7 @@ export function Contact() {
   
   return (
     <Section id={id}>
-      <Flex w="100vw" h="100vh" justifyContent="center" align="center" gap={24}>
+      <Flex gap={24} py={72} mx="auto">
         {contact.map((item) => {
           return (
             <Box key={item.title}>

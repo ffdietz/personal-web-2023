@@ -3,18 +3,18 @@ import { technologies } from "@content";
 
 export function Technologies() {
   return (
-    <Stack h="50vh" align="center">
+    <Stack w="auto" p={24}>
       <Flex
-        w="50vw"
-        h="30vh"
+        w="xl"
         wrap="wrap"
-        align="center"
+        mx="auto"
+        columnGap={8}
+        rowGap={6}
         justifyContent="center"
-        gap={8}
       >
-        {technologies.map((tech) => 
-          <Image src={tech.icon} boxSize={16} key={tech.name} />
-        )}
+        {technologies.map((tech) => (
+          <Image src={tech.icon} boxSize={12} key={tech.name} />
+        ))}
       </Flex>
     </Stack>
   );

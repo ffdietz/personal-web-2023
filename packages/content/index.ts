@@ -38,12 +38,13 @@ export const sections = [
 
 export const heroText = "Creating with code";
 
-export const aboutText = `Hello, my name is Felipe.
-  I'm an visual artist and developer,
-  currently expanding my world wide web frontiers.
-  I have strong skills to bring great ideas in to real world, 
-  my background in field technological artworks and now
-  i'm looking for a place to do great things to the internet.`;
+export const aboutText = 
+  `Hello, my name is Felipe. I'm a visual artist and developer, 
+  currently expanding my frontiers in the web. 
+  My experience in the field of technological artworks and New Media 
+  has allowed me to develop strong skills to bring 
+  amazing ideas to the real world. 
+  Now I dedicate my time to build great things for the Internet.`;
 
 export const technologies = [
   {
@@ -128,7 +129,7 @@ export const experiences = [
     date: "2022 - 2023",
     points: [
       "Front-end features and improvements in the company's marketplace.",
-      "Homepage lead developer and software project managing www.twlvtwlv.com.",
+      "Lead developer and software project of the homepage managing www.twlvtwlv.com.",
     ],
   },
   {
@@ -144,8 +145,9 @@ export const experiences = [
     image: glaciar,
     date: "2021",
     points: [
-      "Full-stack development according to customer requirements.",
-      "Project managing: testing, debugging, deployment, launch, maintenance and updates.",
+      "Full-stack project development",
+      "Instagram data visualisation with React and D3",
+      "Project funded by National Fund for the Development of Culture and the Arts, Chile.",
     ],
   },
   {
@@ -180,8 +182,8 @@ export const experiences = [
     image: hardware,
     date: "2012 -",
     points: [
-      "Full-stack development according to customer requirements.",
-      "Project managing: testing, debugging, deployment, launch, maintenance and updates.",
+      "Electronic design, prototyping, PCB design, manufacturing and implementation of automation solutions and embedded systems.",
+      "Firmware programming in AVR / C++.",
     ],
   },
   // {

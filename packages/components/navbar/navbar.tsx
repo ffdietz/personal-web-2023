@@ -49,7 +49,7 @@ export function Navbar() {
 
   return (
     <Stack
-      w={44}
+      w={40}
       h="100vh"
       py={14}
       my="auto"

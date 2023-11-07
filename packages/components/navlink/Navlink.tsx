@@ -26,7 +26,7 @@ export function NavLink({
         as={motion.span}
         animate={{
           color: isActive ? "#FF0DA4" : "#C9FF00",
-          fontSize: isActive ? "3rem" : "1.5rem",
+          fontSize: isActive ? "2.5rem" : "1.5rem",
         }}
         textAlign="right"
       >

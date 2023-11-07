@@ -14,8 +14,11 @@ function HeroThreeContent() {
 
   return (
     <mesh ref={ref}>
-      <sphereGeometry args={[30, 3, 500]} />
-      <meshBasicMaterial color="grey" wireframe/>
+      <sphereGeometry args={[30, 2, 500]} />
+      <meshBasicMaterial
+        wireframe
+        color="darkgrey"
+      />
     </mesh>
   );
 }
@@ -24,7 +27,7 @@ export function HeroBackground() {
   return (
     <Canvas camera={{ position: [0, 0, 15] }}>
       <ambientLight />
-      <pointLight position={[5, 5, 5]} />
+      <pointLight position={[1, 1, 1]} />
       <HeroThreeContent />
     </Canvas>
   );
