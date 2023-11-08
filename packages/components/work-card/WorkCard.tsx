@@ -5,7 +5,7 @@ import { Experience } from "@types";
 
 
 export function WorkCard({experience}: {experience: Experience}) {
-  const [isOpen, setIsOpen] = useState<boolean>(false)
+  const [isOpen, setIsOpen] = useState<boolean>(false);
   const { title, company, date, points, image } = experience;
 
   return (
@@ -36,10 +36,13 @@ export function WorkCard({experience}: {experience: Experience}) {
         <Heading fontSize={32} lineHeight="1">
           {title}
         </Heading>
-        <Text fontSize={22} lineHeight="0.5">
-          {company}
-        </Text>
+        {company && (
+          <Text fontSize={22} lineHeight="0.5">
+            {company}
+          </Text>
+        )}
         <Text fontSize={18}>{date}</Text>
+        <Text fontSize={18} color="primaryColor">{isOpen ? "-" : "+" }INFO</Text>
         <AnimatePresence>
           {isOpen && (
             <UnorderedList>

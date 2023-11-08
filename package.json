@@ -28,19 +28,5 @@
   },
   "devDependencies": {
     "@types/three": "^0.158.2"
-  },
-  "overrides": {
-    "semver": "~7.5.2",
-    "word-wrap": "~1.2.4",
-    "zod": "~3.22.3",
-    "postcss": "~8.4.31",
-    "next": "~13.4.20-canary.13"
-  },
-  "pnpm": {
-    "overrides": {
-      "next@>=0.9.9 <13.4.20-canary.13": ">=13.4.20-canary.13",
-      "postcss@<8.4.31": ">=8.4.31",
-      "zod@<=3.22.2": ">=3.22.3"
-    }
   }
 }
