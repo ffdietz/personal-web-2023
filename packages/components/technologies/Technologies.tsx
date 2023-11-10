@@ -3,7 +3,7 @@ import { technologies } from "@content";
 
 export function Technologies() {
   return (
-    <Stack w="auto" p={24}>
+    <Stack w="auto" p={32}>
       <Flex
         w="xl"
         wrap="wrap"
@@ -13,7 +13,7 @@ export function Technologies() {
         justifyContent="center"
       >
         {technologies.map((tech) => (
-          <Image src={tech.icon} boxSize={12} key={tech.name} />
+          <Image src={tech.icon} boxSize={10} key={tech.name} />
         ))}
       </Flex>
     </Stack>

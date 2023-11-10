@@ -15,14 +15,14 @@ export function WorkCard({experience}: {experience: Experience}) {
         backgroundSize: isOpen ? "150%" : "80%",
         backgroundColor: isOpen ? "rgba(0, 0, 0, 0.1)" : "rgba(0, 0, 0, 0.7)",
       }}
-      w="sm"
+      w="xs"
       h="xs"
       color="secondaryColor"
+      borderRadius={10}
       bgImage={`url(${image})`}
       bgBlendMode="color"
       bgRepeat="no-repeat"
       bgPosition="center"
-      backdropFilter="auto"
       cursor="pointer"
       onClick={() => setIsOpen(!isOpen)}
     >
@@ -42,7 +42,9 @@ export function WorkCard({experience}: {experience: Experience}) {
           </Text>
         )}
         <Text fontSize={18}>{date}</Text>
-        <Text fontSize={18} color="primaryColor">{isOpen ? "-" : "+" }INFO</Text>
+        <Text fontSize={18} color="primaryColor">
+          {isOpen ? "-" : "+"}INFO
+        </Text>
         <AnimatePresence>
           {isOpen && (
             <UnorderedList>

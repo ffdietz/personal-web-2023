@@ -1,4 +1,5 @@
-import { Box, Flex, Stack, Text } from "@chakra-ui/react";
+import { Stack, Text } from "@chakra-ui/react";
+import { motion, useInView } from "framer-motion";
 import { Section } from "@components/section";
 import { aboutText, sections } from "@content";
 
@@ -7,8 +8,14 @@ export function About() {
 
   return (
     <Section id={id}>
-      <Stack w="auto" m="auto" pt={52}>
-        <Text w="2xl" fontSize="2xl" textAlign="center">
+      <Stack as={motion.div} w="auto" m="auto" pt={0}>
+        <Text
+          w="3xl"
+          fontSize="2xl"
+          textAlign="center"
+          backdropFilter="auto"
+          backdropBlur="6px"
+        >
           {aboutText}
         </Text>
       </Stack>

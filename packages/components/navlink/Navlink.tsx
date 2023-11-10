@@ -6,10 +6,10 @@ import { TLink } from '@types';
 export function NavLink({
   link,
   isActive,
-  }:{
+}: {
   link: TLink;
   isActive: boolean;
-  }) { 
+}) {
   return (
     <Link
       key={link.title}
@@ -24,6 +24,8 @@ export function NavLink({
     >
       <Text
         as={motion.span}
+        backdropFilter="auto"
+        backdropBlur="6px"
         animate={{
           color: isActive ? "#FF0DA4" : "#C9FF00",
           fontSize: isActive ? "2.5rem" : "1.5rem",
