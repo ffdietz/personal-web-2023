@@ -1,4 +1,4 @@
-import { Grid, Stack } from "@chakra-ui/react";
+import { Grid } from "@chakra-ui/react";
 import { Section } from "@components/section";
 import { WorkCard } from "../work-card";
 import { experiences, sections } from "@content";
@@ -11,10 +11,10 @@ export function Works() {
       <Grid
         templateColumns="repeat(3, 1fr)"
         rowGap={6}
-        columnGap={1}
+        columnGap={4}
         py={16}
-        px={14}
-        ml="auto"
+        pl={20}
+        mx="auto"
       >
         {experiences.map((experience) => (
           <WorkCard experience={experience} key={experience.title} />

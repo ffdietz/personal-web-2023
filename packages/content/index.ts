@@ -39,12 +39,17 @@ export const sections = [
 export const heroText = "Creating with code";
 
 export const aboutText = 
-  `Hello, my name is Felipe. I'm a visual artist and developer, 
-  currently expanding my frontiers in the web. 
-  My experience in the field of technological artworks and New Media 
-  has allowed me to develop strong skills to bring 
-  amazing ideas to the real world. 
-  Now I dedicate my time to build great things for the Internet.`;
+  `I'm Felipe, a versatile visual artist and burgeoning web developer. 
+  With a robust foundation in technological artworks and New Media, 
+  I possess the ability to bring extraordinary visions to life. 
+  Presently, my passion lies in crafting cutting-edge projects for 
+  the digital realm.`;
+  // `Hello, my name is Felipe. I'm a visual artist and developer, 
+  // currently expanding my frontiers in the web. 
+  // My experience in the field of technological artworks and New Media 
+  // has allowed me to develop strong skills to bring 
+  // amazing ideas to the real world. 
+  // Now I dedicate my time to build great things for the Internet.`;
 
 export const technologies = [
   {

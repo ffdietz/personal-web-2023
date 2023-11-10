@@ -54,7 +54,7 @@ export function Navbar() {
       py={14}
       my="auto"
       position="fixed"
-      zIndex={1}
+      zIndex={2}
       textAlign="right"
       justifyContent="space-between"
     >
