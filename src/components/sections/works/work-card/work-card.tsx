@@ -59,6 +59,7 @@ export function WorkCard({ experience }: { experience: Experience }) {
                   return (
                     <ListItem
                       as={motion.li}
+                      key={point}
                       initial={{
                         opacity: 0,
                         height: 0,
