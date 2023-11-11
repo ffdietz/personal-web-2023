@@ -1,9 +1,9 @@
 "use client";
-import { ReactNode } from "react";
 import { ChakraProvider } from "@chakra-ui/react";
-import { Footer } from "@components/footer";
-import { theme } from "@theme/theme";
-import { Navbar } from "@components/navbar";
+import { ReactNode } from "react";
+import { Footer } from "../src/components/layout/footer";
+import { Navbar } from "../src/components/layout/navbar";
+import { theme } from "../src/theme/theme";
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
