@@ -18,7 +18,7 @@ import {
   ts,
   twelve,
   workshop,
-} from "../../../public/assets";
+} from "../../public/assets";
 import { GithubIcon, LinkedinIcon, MailIcon } from "../theme/icons";
 
 export const sections = [
