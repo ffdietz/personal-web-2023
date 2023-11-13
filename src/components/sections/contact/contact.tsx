@@ -1,6 +1,7 @@
 import { Box, Flex, Icon } from "@chakra-ui/react";
-import { contact, sections } from "../../../content";
-import { Section } from "../../layout/section";
+import { Section } from "@components/layout/section";
+import { sections, contact } from "@content";
+
 
 export function Contact() {
   const { id } = sections[2];

@@ -1,7 +1,8 @@
-import { Text } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { TLink } from "../../../../types";
+import { Text } from "@chakra-ui/react";
+import { TLink } from "@types";
+
 
 export function NavLink({
   link,

@@ -1,5 +1,6 @@
 import { Flex, Image, Stack } from "@chakra-ui/react";
-import { technologies } from "../../../content";
+import { technologies } from "@content";
+
 
 export function Technologies() {
   return (
