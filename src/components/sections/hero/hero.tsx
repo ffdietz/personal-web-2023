@@ -1,6 +1,6 @@
 import { Stack, Text } from "@chakra-ui/react";
-import { heroText } from "../../../content";
-import { Section } from "../../layout/section";
+import { Section } from "@components/layout/section";
+import { heroText } from "@content";
 
 export function Hero() {
   return (

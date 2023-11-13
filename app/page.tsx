@@ -1,5 +1,5 @@
 "use client";
-import { Home } from "../src/components/home";
+import { Home } from "@components/home";
 
 export default function Page() {
   return <Home />;

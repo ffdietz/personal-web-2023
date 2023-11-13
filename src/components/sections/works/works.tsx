@@ -1,7 +1,9 @@
 import { Grid } from "@chakra-ui/react";
 import { experiences, sections } from "../../../content";
-import { Section } from "../../layout/section";
+import { Section } from "@components/layout/section";
 import { WorkCard } from "./work-card";
+
+
 
 export function Works() {
   const { id } = sections[1];

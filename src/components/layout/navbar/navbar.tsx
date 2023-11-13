@@ -1,10 +1,11 @@
-import { Box, Stack } from "@chakra-ui/react";
 import { useEffect, useState } from "react";
-import { sections } from "../../../content";
-import { TLink } from "../../../types";
+import { Box, Stack } from "@chakra-ui/react";
 import { Logo } from "./logo";
-import { Resume } from "./resume";
 import { NavLink } from "./navlink";
+import { TLink } from "@types";
+import { sections } from "@content";
+import { Resume } from "./resume";
+
 
 export function Navbar() {
   const [activeSection, setActiveSection] = useState<string | null>(null);

@@ -1,3 +1,5 @@
+import { useState } from "react";
+import { AnimatePresence, motion } from "framer-motion";
 import {
   GridItem,
   Heading,
@@ -6,9 +8,7 @@ import {
   Text,
   UnorderedList,
 } from "@chakra-ui/react";
-import { AnimatePresence, motion } from "framer-motion";
-import { useState } from "react";
-import { Experience } from "../../../../types";
+import { Experience } from "@types";
 
 export function WorkCard({ experience }: { experience: Experience }) {
   const [isOpen, setIsOpen] = useState<boolean>(false);

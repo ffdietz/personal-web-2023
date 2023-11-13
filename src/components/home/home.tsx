@@ -1,10 +1,10 @@
 import { Stack } from "@chakra-ui/react";
-import { BackgroundScene } from "../layout/background-scene";
-import { About } from "../sections/about";
-import { Contact } from "../sections/contact";
-import { Hero } from "../sections/hero";
-import { Technologies } from "../sections/technologies/technologies";
-import { Works } from "../sections/works";
+import { About } from "@components/sections/about";
+import { Contact } from "@components/sections/contact";
+import { Hero } from "@components/sections/hero";
+import { Technologies } from "@components/sections/technologies";
+import { Works } from "@components/sections/works";
+import { BackgroundScene } from "@components/layout/background-scene";
 
 export function Home() {
   return (
