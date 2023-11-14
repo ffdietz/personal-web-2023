@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import {
+  Flex,
   GridItem,
   Heading,
   ListItem,
@@ -18,11 +19,11 @@ export function WorkCard({ experience }: { experience: Experience }) {
     <GridItem
       as={motion.div}
       animate={{
-        backgroundSize: isOpen ? "150%" : "80%",
-        backgroundColor: isOpen ? "rgba(0, 0, 0, 0.1)" : "rgba(0, 0, 0, 0.7)",
+        backgroundSize: isOpen ? "150%" : "90%",
+        backgroundColor: isOpen ? "rgba(0, 0, 0, 0.6)" : "rgba(0, 0, 0, 0.45)",
       }}
       w="xs"
-      h="xs"
+      h="sm"
       color="secondaryColor"
       borderRadius={10}
       bgImage={`url(${image})`}
@@ -34,10 +35,11 @@ export function WorkCard({ experience }: { experience: Experience }) {
     >
       <Stack
         as={motion.div}
-        animate={{ backdropFilter: isOpen ? "blur(6px)" : "blur(0px)" }}
+        animate={{ backdropFilter: isOpen ? "blur(20px)" : "blur(3px)" }}
         w="full"
         h="full"
         padding={4}
+        gap={2}
       >
         <Heading fontSize={32} lineHeight="1">
           {title}
@@ -48,9 +50,14 @@ export function WorkCard({ experience }: { experience: Experience }) {
           </Text>
         )}
         <Text fontSize={18}>{date}</Text>
-        <Text fontSize={18} color="primaryColor">
-          {isOpen ? "-" : "+"}INFO
-        </Text>
+        <Flex align="center" lineHeight="0.5">
+          <Text as="span" fontSize={32} color="primaryColor">
+            {isOpen ? "-" : "+"}
+          </Text>
+          <Text as="span" fontSize={18} color="primaryColor">
+            INFO
+          </Text>
+        </Flex>
         <AnimatePresence>
           {isOpen && (
             <UnorderedList>
@@ -60,6 +67,7 @@ export function WorkCard({ experience }: { experience: Experience }) {
                     <ListItem
                       as={motion.li}
                       key={point}
+                      fontSize={18}
                       initial={{
                         opacity: 0,
                         height: 0,

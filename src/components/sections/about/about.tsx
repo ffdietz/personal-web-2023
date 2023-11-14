@@ -9,7 +9,7 @@ export function About() {
 
   return (
     <Section id={id}>
-      <Stack as={motion.div} w="auto" m="auto" pt={0}>
+      <Stack as={motion.div} w="auto" m="auto" pt={56}>
         <Text
           w="3xl"
           fontSize="2xl"
