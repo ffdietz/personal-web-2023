@@ -1,8 +1,7 @@
-import { motion } from "framer-motion";
 import { Stack, Text } from "@chakra-ui/react";
-import { Section } from "@components/layout/section";
-import { sections, aboutText } from "@content";
-
+import { Section } from "@components/ui/section";
+import { aboutText, sections } from "@content";
+import { motion } from "framer-motion";
 
 export function About() {
   const { id } = sections[0];
@@ -14,8 +13,9 @@ export function About() {
           w="3xl"
           fontSize="2xl"
           textAlign="center"
+          backgroundColor="#000000AA"
           backdropFilter="auto"
-          backdropBlur="6px"
+          backdropBlur="20px"
         >
           {aboutText}
         </Text>
