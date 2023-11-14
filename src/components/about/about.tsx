@@ -8,15 +8,13 @@ export function About() {
 
   return (
     <Section id={id}>
-      <Stack as={motion.div} w="auto" m="auto" pt={56}>
-        <Text
-          w="3xl"
-          fontSize="2xl"
-          textAlign="center"
-          backgroundColor="#000000AA"
-          backdropFilter="auto"
-          backdropBlur="20px"
-        >
+      <Stack
+        as={motion.div}
+        w="auto"
+        m="auto"
+        pt={56}
+      >
+        <Text w="3xl" fontSize="2xl" textAlign="center" fontWeight="bold">
           {aboutText}
         </Text>
       </Stack>
