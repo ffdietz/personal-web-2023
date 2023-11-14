@@ -5,7 +5,7 @@ import { heroText } from "@content";
 export function Hero() {
   return (
     <Section id="#">
-      <Stack w="100vw" h="100vh" m="auto" position="relative" bg="transparent">
+      <Stack w="100vw" h="90vh" m="auto" position="relative" bg="transparent">
         <Text
           position="absolute"
           top={96}

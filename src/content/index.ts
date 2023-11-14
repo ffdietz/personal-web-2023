@@ -38,7 +38,8 @@ export const sections = [
 
 export const heroText = "Creating with code";
 
-export const aboutText = `I'm Felipe, a versatile visual artist and burgeoning web developer. 
+export const aboutText = 
+  `I'm Felipe, a versatile visual artist and burgeoning web developer. 
   With a robust foundation in technological artworks and New Media, 
   I possess the ability to bring extraordinary visions to life. 
   Presently, my passion lies in crafting cutting-edge projects for 

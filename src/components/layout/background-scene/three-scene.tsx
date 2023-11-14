@@ -10,8 +10,8 @@ export default function ThreeScene() {
 
   useFrame((state) => {
     if (ref && ref.current) {
-      ref.current.rotation.x += 0.001;
-      ref.current.rotation.y += -0.0009;
+      ref.current.rotation.x -= 0.00003;
+      ref.current.rotation.y += 0.00005;
     }
     const offset = scroll.offset;
     state.camera.position.set(

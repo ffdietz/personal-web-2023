@@ -14,7 +14,7 @@ export function Technologies() {
         justifyContent="center"
       >
         {technologies.map((tech) => (
-          <Image src={tech.icon} alt={tech.name} boxSize={10} key={tech.name} />
+          <Image src={tech.icon} alt={tech.name} boxSize={14} key={tech.name} />
         ))}
       </Flex>
     </Stack>
