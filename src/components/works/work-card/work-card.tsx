@@ -35,7 +35,7 @@ export function WorkCard({ experience }: { experience: Experience }) {
     >
       <Stack
         as={motion.div}
-        animate={{ backdropFilter: isOpen ? "blur(20px)" : "blur(1px)" }}
+        animate={{ backdropFilter: isOpen ? "blur(10px)" : "blur(0px)" }}
         w="full"
         h="full"
         padding={4}

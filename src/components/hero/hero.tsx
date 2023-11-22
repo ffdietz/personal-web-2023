@@ -1,5 +1,5 @@
 import { Stack, Text } from "@chakra-ui/react";
-import { Section } from "@components/ui/section";
+import { Section } from "@components/section";
 import { heroText } from "@content";
 
 export function Hero() {

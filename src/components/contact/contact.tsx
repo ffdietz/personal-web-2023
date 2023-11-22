@@ -1,5 +1,5 @@
 import { Box, Flex, Icon } from "@chakra-ui/react";
-import { Section } from "@components/ui/section";
+import { Section } from "@components/section";
 import { contact, sections } from "@content";
 
 export function Contact() {
