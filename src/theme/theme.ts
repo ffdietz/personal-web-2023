@@ -18,6 +18,9 @@ export const theme: ThemeOverride = extendTheme({
         color: "primaryColor",
         fontFamily: "body",
         overscrollBehavior: "none",
+        "::-webkit-scrollbar": {
+          display: "none",
+        },
       },
     },
   },

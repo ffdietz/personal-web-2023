@@ -1,7 +1,6 @@
 import { Stack, Text } from "@chakra-ui/react";
-import { Section } from "@components/ui/section";
+import { Section } from "@components/section";
 import { aboutText, sections } from "@content";
-import { motion } from "framer-motion";
 
 export function About() {
   const { id } = sections[0];
