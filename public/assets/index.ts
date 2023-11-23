@@ -1,3 +1,4 @@
+// works
 const amigo = "assets/works_amigo.png"
 const glaciar = "assets/works_glaciar_grey.png"
 const reader = "assets/works_data_reader.png"
@@ -7,6 +8,7 @@ const twelve = "assets/works_twelve.png"
 const workshop = "assets/works_workshop_adk.png"
 const hardware = "assets/works_hardware_dev.png"
 
+// skills
 const html = "assets/tech_html5.png"
 const css = "assets/tech_css3.png"
 const js = "assets/tech_js.png"
@@ -18,7 +20,7 @@ const graph = "assets/tech_graph.png"
 const framer = "assets/tech_framer.png"
 const three = "assets/tech_three.png"
 const git = "assets/tech_git.png"
-
+const cpp = "assets/tech_cpp.png"
 
 export { 
   amigo, 
@@ -39,5 +41,6 @@ export {
   graph, 
   framer, 
   three, 
-  git 
+  git,
+  cpp
 };

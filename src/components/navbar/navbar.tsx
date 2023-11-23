@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { AnimatePresence, motion } from "framer-motion";
 import { Box, Stack } from "@chakra-ui/react";
 import { Logo } from "./logo";
 import { NavLink } from "./navlink";
@@ -49,29 +50,40 @@ export function Navbar() {
   }, []);
 
   return (
-    <Stack
-      w={40}
-      h="100vh"
-      py={14}
-      my="auto"
-      position="fixed"
-      zIndex={2}
-      textAlign="right"
-      justifyContent="space-between"
-    >
-      <Box cursor="pointer" onClick={scrollToTop}>
-        <Logo />
-      </Box>
-      <Stack>
-        {sections.map((link: TLink) => (
-          <NavLink
-            key={link.title}
-            link={link}
-            isActive={activeSection === link.id}
-          />
-        ))}
+    <AnimatePresence>
+      <Stack
+        as={motion.nav}
+        initial={{ opacity: 0 }}
+        animate={{
+          opacity: 1,
+          transition:{
+            duration: 0.5,
+            delay: 2
+          }
+        }}
+        w={40}
+        h="full"
+        py={14}
+        my="auto"
+        position="fixed"
+        zIndex={2}
+        textAlign="right"
+        justifyContent="space-between"
+      >
+        <Box cursor="pointer" onClick={scrollToTop}>
+          <Logo />
+        </Box>
+        <Stack>
+          {sections.map((link: TLink) => (
+            <NavLink
+              key={link.title}
+              link={link}
+              isActive={activeSection === link.id}
+            />
+          ))}
+        </Stack>
+        <Resume />
       </Stack>
-      <Resume />
-    </Stack>
+    </AnimatePresence>
   );
 }

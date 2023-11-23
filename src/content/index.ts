@@ -1,6 +1,7 @@
 import {
   amigo,
   css,
+  cpp,
   framer,
   fullstack,
   git,
@@ -85,6 +86,10 @@ export const technologies = [
   {
     name: "Three JS",
     icon: three,
+  },
+  {
+    name: "C/C++",
+    icon: cpp,
   },
   {
     name: "Git",
