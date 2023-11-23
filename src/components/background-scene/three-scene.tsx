@@ -1,7 +1,7 @@
 import { useRef } from "react";
 import { Mesh } from "three";
 import { useFrame } from "@react-three/fiber";
-import { MeshDistortMaterial, useScroll } from "@react-three/drei";
+import { useScroll } from "@react-three/drei";
 
 
 export default function ThreeScene() {
@@ -25,7 +25,7 @@ export default function ThreeScene() {
   return (
     <mesh ref={ref}>
       <sphereGeometry args={[10, 2, 200]} />
-      <meshBasicMaterial wireframe color="darkgrey" transparent opacity={0.3}/>
+      <meshBasicMaterial wireframe color="darkgrey" transparent opacity={0.35}/>
     </mesh>
   );
 }

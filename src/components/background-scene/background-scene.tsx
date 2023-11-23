@@ -7,7 +7,7 @@ export const BackgroundScene = () => {
     <Canvas camera={{ position: [0, 0, 15] }}>
       <OrbitControls autoRotate/>
       <ambientLight/>
-      <pointLight position={[1, 1, 1]} />
+      <pointLight position={[0, 0, 10]} />
       <ScrollControls pages={1}>
         <ThreeScene />
       </ScrollControls>

@@ -7,14 +7,12 @@ export function About() {
 
   return (
     <Section id={id}>
-      <Stack w="auto" m="auto" pt={56}>
+      <Stack w="auto" m="auto" pt={52}>
         <Text
-          w="3xl"
+          w="xl"
           fontSize="2xl"
           textAlign="center"
           fontWeight="bold"
-          backdropFilter="auto"
-          backdropBlur="5px"
         >
           {aboutText}
         </Text>
