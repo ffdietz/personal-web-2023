@@ -22,10 +22,12 @@ export function Hero() {
               }
             }}
             position="absolute"
-            top={96}
-            right={56}
-            fontSize="4xl"
+            w={{ base:"2xs", md:"full" }}
+            top="50%"
+            right={{ base:8, md:56 }}
+            fontSize="5xl"
             fontWeight="bold"
+            textAlign="right"
             textTransform="uppercase"
           >
             {heroText}

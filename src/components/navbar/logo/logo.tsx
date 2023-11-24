@@ -5,14 +5,14 @@ export function Logo() {
     <Stack>
       <Text
         fontFamily=""
-        fontSize={58}
+        fontSize={{base: 26, md:58}}
         fontWeight={500}
         lineHeight="0.75"
         textTransform="uppercase"
       >
         ffd
       </Text>
-      <Text fontFamily="" fontSize={18} marginLeft="auto" lineHeight={0.1}>
+      <Text fontFamily="" fontSize={{base:8, md:18}} marginLeft="auto" lineHeight={0.1}>
         developer
       </Text>
     </Stack>
