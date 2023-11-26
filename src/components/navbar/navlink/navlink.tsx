@@ -4,10 +4,7 @@ import { Text } from "@chakra-ui/react";
 import { TLink } from "@types";
 
 
-export function NavLink({
-  link,
-  isActive,
-}: {
+export function NavLink({ link, isActive } : {
   link: TLink;
   isActive: boolean;
 }) {
@@ -25,12 +22,11 @@ export function NavLink({
     >
       <Text
         as={motion.span}
-        backdropFilter="auto"
-        backdropBlur="6px"
         animate={{
           color: isActive ? "#FF0DA4" : "#C9FF00",
           fontSize: isActive ? "2.5rem" : "1.5rem",
         }}
+        fontSize={{ base: 8, md: 16 }}
         textAlign="right"
       >
         {link.title}

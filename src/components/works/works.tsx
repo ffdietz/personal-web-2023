@@ -9,11 +9,11 @@ export function Works() {
   return (
     <Section id={id}>
       <Grid
-        templateColumns="repeat(3, 1fr)"
+        templateColumns={{ base:"1fr", md:"repeat(3, 1fr)" }}
         rowGap={6}
         columnGap={4}
-        py={16}
-        pl={20}
+        py={{ base:0, md:16 }}
+        pl={{ base:0, md:20 }}
         mx="auto"
       >
         {experiences.map((experience) => (

@@ -4,9 +4,13 @@ import { technologies } from "@content";
 
 export function Technologies() {
   return (
-    <Stack w="auto" p={36}>
+    <Stack
+      w="full"
+      p={{ base: 0, md: 36 }}
+      py={{ base: 28, md: 0 }}
+    >
       <Flex
-        w="xl"
+        w={{ base: "2xs", md: "xl" }}
         wrap="wrap"
         mx="auto"
         columnGap={4}
