@@ -1,23 +1,40 @@
-import { Box, Flex, Icon } from "@chakra-ui/react";
+import { Box, Flex, Icon, Text, useBreakpoint } from "@chakra-ui/react";
 import { Section } from "@components/section";
 import { contact, sections } from "@content";
 
 export function Contact() {
   const { id } = sections[2];
+  const breakpoint = useBreakpoint({ ssr: false });
 
   return (
     <Section id={id}>
-      <Flex gap={24} py={72} mx="auto">
+      <Box display="flex" flexDir={{ base:"column", md:"row" }} gap={{base:20, md:24}} py={72} mx="auto">
         {contact.map((item) => {
           return (
-            <Box key={item.title}>
-              <a href={item.link}>
-                <Icon as={item.icon} boxSize={32} />
-              </a>
-            </Box>
+            <a href={item.link} key={item.title}>
+              <Flex
+                w="3xs"
+                justifyContent="space-between"
+                alignItems="center"
+                gap={12}
+              >
+                {breakpoint === "base" ? (
+                  <Text
+                    as="span"
+                    textTransform="uppercase"
+                    fontSize={{ base: "2xl" }}
+                    w="full"
+                    textAlign="right"
+                  >
+                    {item.title}
+                  </Text>
+                ) : null}
+                <Icon as={item.icon} boxSize={{ base: 20, md: 32 }} />
+              </Flex>
+            </a>
           );
         })}
-      </Flex>
+      </Box>
     </Section>
   );
 }
