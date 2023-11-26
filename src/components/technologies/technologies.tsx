@@ -6,8 +6,7 @@ export function Technologies() {
   return (
     <Stack
       w="full"
-      p={{ base: 0, md: 36 }}
-      py={{ base: 28, md: 0 }}
+      py={{ base: 28, md: 36 }}
     >
       <Flex
         w={{ base: "2xs", md: "xl" }}

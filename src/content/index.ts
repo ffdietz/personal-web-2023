@@ -40,11 +40,10 @@ export const sections = [
 export const heroText = "Creating with code";
 
 export const aboutText = 
-  `I'm Felipe, a versatile visual artist and burgeoning web developer. 
-  With a robust foundation in technological artworks and New Media, 
-  I possess the ability to bring extraordinary visions to life. 
-  Presently, my passion lies in crafting cutting-edge projects for 
-  the digital realm.`;
+  `I'm Felipe, a software artisan merging visual arts with code. 
+  With expertise in [list programming languages], 
+  I craft software solutions that are both functional and visually compelling. 
+  Let's collaborate in creating digital landscapes that leave a lasting impression!`;
 
 export const technologies = [
   {
