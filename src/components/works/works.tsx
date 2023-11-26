@@ -13,7 +13,7 @@ export function Works() {
         rowGap={6}
         columnGap={4}
         py={{ base:0, md:16 }}
-        pl={{ base:0, md:20 }}
+        // pl={{ base:0, md:20 }}
         mx="auto"
       >
         {experiences.map((experience) => (
