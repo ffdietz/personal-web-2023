@@ -61,8 +61,8 @@ export function Navbar() {
             delay: 2,
           },
         }}
-        w={{ base: "full", md: 40 }}
-        h="full"
+        w={{ base:"full", md: 40 }}
+        h={{ base:"auto", md:"full" }}
         display="flex"
         flexDir={{ base: "row", md: "column" }}
         py={{ base: 6, md: 14 }}
