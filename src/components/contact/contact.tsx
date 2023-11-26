@@ -4,7 +4,7 @@ import { contact, sections } from "@content";
 
 export function Contact() {
   const { id } = sections[2];
-  const breakpoint = useBreakpoint({ ssr: false });
+  const breakpoint = useBreakpoint();
 
   return (
     <Section id={id}>
