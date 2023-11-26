@@ -6,7 +6,7 @@ import { heroText } from "@content";
 export function Hero() {
   return (
     <Section id="#">
-      <Stack w="100vw" h="90vh" m="auto" position="relative">
+      <Stack w="full" m="auto" position="relative" py={96}>
         <AnimatePresence>
           <Text
             as={motion.p}
@@ -24,7 +24,7 @@ export function Hero() {
             position="absolute"
             w={{ base:"2xs", md:"full" }}
             top="50%"
-            right={{ base:8, md:56 }}
+            right={{ base:8, md:28 }}
             fontSize="5xl"
             fontWeight="bold"
             textAlign="right"

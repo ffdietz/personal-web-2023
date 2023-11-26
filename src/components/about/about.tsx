@@ -7,9 +7,10 @@ export function About() {
 
   return (
     <Section id={id}>
-      <Stack w="auto" m="auto" pt={{ base:36, md:52 }}>
+      <Stack w="full" pt={{ base: 36, md: 52 }}>
         <Text
-          w={{ base: "xs", md: "auto" }}
+          w={{ base: "xs", md: "xl" }}
+          m="auto"
           fontSize="2xl"
           textAlign="center"
           fontWeight="bold"
