@@ -12,8 +12,7 @@ export function Works() {
         templateColumns={{ base: "1fr", md: "repeat(3, 1fr)" }}
         rowGap={6}
         columnGap={4}
-        py={{ base: 0, md: 16 }}
-        // pl={{base:0, md:20}}
+        py={{ base: 12, md: 16 }}
         mx="auto"
       >
         {experiences.map((experience) => (

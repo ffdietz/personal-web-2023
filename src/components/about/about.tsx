@@ -7,7 +7,7 @@ export function About() {
 
   return (
     <Section id={id}>
-      <Stack w="full" pt={{ base: 36, md: 52 }}>
+      <Stack w="full" pt={{ base: 44, md: 52 }}>
         <Text
           w={{ base: "xs", md: "xl" }}
           m="auto"

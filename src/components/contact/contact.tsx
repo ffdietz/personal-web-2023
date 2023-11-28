@@ -12,7 +12,7 @@ export function Contact() {
         display="flex"
         flexDir={{base: "column", md: "row"}}
         gap={{base: 20, md: 18}}
-        py={72}
+        py={{base:36 ,md:72}}
         mx="auto"
       >
         {contact.map((item) => {

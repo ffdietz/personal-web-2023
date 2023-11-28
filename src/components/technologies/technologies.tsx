@@ -5,9 +5,9 @@ import { technologies } from "@content";
 export function Technologies() {
   return (
     <Section>
-      <Stack w="full" py={{ base: 28, md: 36 }}>
+      <Stack w="full" py={{ base: 32, md: 36 }}>
         <Flex
-          w={{ base: "2xs", md: "xl" }}
+          w={{ base: "xs", md: "xl" }}
           wrap="wrap"
           mx="auto"
           columnGap={4}
@@ -17,10 +17,10 @@ export function Technologies() {
         >
           {technologies.map((tech) => (
             <Image
+              key={tech.name}
               src={tech.icon}
               alt={tech.name}
               boxSize={14}
-              key={tech.name}
             />
           ))}
         </Flex>
