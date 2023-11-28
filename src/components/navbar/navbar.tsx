@@ -3,10 +3,9 @@ import { AnimatePresence, motion } from "framer-motion";
 import { Box } from "@chakra-ui/react";
 import { Logo } from "./logo";
 import { NavLink } from "./navlink";
+import { Resume } from "./resume";
 import { TLink } from "@types";
 import { sections } from "@content";
-import { Resume } from "./resume";
-
 
 export function Navbar() {
   const [activeSection, setActiveSection] = useState<string | null>(null);
@@ -26,7 +25,7 @@ export function Navbar() {
 
     const observerCallback: IntersectionObserverCallback = (entries) => {
       entries.forEach((entry) => {
-        if (entry.isIntersecting) {
+        if (entry.isIntersecting && entry.target.id) {
           setActiveSection(entry.target.id);
         }
       });
@@ -61,8 +60,8 @@ export function Navbar() {
             delay: 2,
           },
         }}
-        w={{ base:"full", md: 40 }}
-        h={{ base:"auto", md:"full" }}
+        w={{ base: "full", md: 44 }}
+        h={{ base: "auto", md: "full" }}
         display="flex"
         flexDir={{ base: "row", md: "column" }}
         py={{ base: 6, md: 14 }}
@@ -72,12 +71,16 @@ export function Navbar() {
         zIndex={2}
         textAlign="right"
         justifyContent="space-between"
-        alignContent={{base: "center",md:"none"}}
+        alignContent={{ base: "center", md: "none" }}
       >
         <Box cursor="pointer" onClick={scrollToTop}>
           <Logo />
         </Box>
-        <Box display="flex" flexDir={{ base: "row", md: "column" }} gap={{base: 4, md:"none"}}>
+        <Box
+          display="flex"
+          flexDir={{ base: "row", md: "column" }}
+          gap={{ base: 4, md: "none" }}
+        >
           {sections.map((link: TLink) => (
             <NavLink
               key={link.title}
@@ -86,7 +89,7 @@ export function Navbar() {
             />
           ))}
         </Box>
-        <Box display={{base: "none", md:"block"}}>
+        <Box display={{ base: "none", md: "block" }}>
           <Resume />
         </Box>
       </Box>

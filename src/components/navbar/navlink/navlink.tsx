@@ -1,10 +1,12 @@
-import { motion } from "framer-motion";
-import Link from "next/link";
 import { Text } from "@chakra-ui/react";
 import { TLink } from "@types";
+import { motion } from "framer-motion";
+import Link from "next/link";
 
-
-export function NavLink({ link, isActive } : {
+export function NavLink({
+  link,
+  isActive,
+}: {
   link: TLink;
   isActive: boolean;
 }) {
