@@ -16,7 +16,7 @@ export function NavLink({
       color: isActive ? "#FF0DA4" : "#C9FF00",
       fontSize: isActive ? "2.5rem" : "1.5rem",
     },
-  });
+  }, {ssr: true});
 
   return (
     <Link
