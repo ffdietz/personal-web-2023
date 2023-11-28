@@ -1,4 +1,3 @@
-import { StaticImageData } from "next/image";
 
 export type Experience = {
   title: string,
@@ -14,6 +13,6 @@ export type TLink = {
 }
 
 export interface SectionProps {
-  id: string;
+  id?: string;
   children: React.ReactNode;
 }

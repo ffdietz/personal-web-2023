@@ -41,7 +41,7 @@ export const heroText = "Creating with code";
 
 export const aboutText = 
   `I'm Felipe, a software artisan merging visual arts with code. 
-  With expertise in [list programming languages], 
+  With expertise in Javascript and C++, 
   I craft software solutions that are both functional and visually compelling. 
   Let's collaborate in creating digital landscapes that leave a lasting impression!`;
 

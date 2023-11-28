@@ -1,7 +1,7 @@
 import { Grid } from "@chakra-ui/react";
+import { Section } from "@components/section";
 import { experiences, sections } from "../../content";
 import { WorkCard } from "./work-card";
-import { Section } from "@components/section";
 
 export function Works() {
   const { id } = sections[1];
@@ -9,11 +9,10 @@ export function Works() {
   return (
     <Section id={id}>
       <Grid
-        templateColumns={{ base:"1fr", md:"repeat(3, 1fr)" }}
+        templateColumns={{ base: "1fr", md: "repeat(3, 1fr)" }}
         rowGap={6}
         columnGap={4}
-        py={{ base:0, md:16 }}
-        // pl={{ base:0, md:20 }}
+        py={{ base: 12, md: 16 }}
         mx="auto"
       >
         {experiences.map((experience) => (

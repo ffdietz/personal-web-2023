@@ -1,13 +1,23 @@
+import { Text, useBreakpointValue } from "@chakra-ui/react";
+import { TLink } from "@types";
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { Text } from "@chakra-ui/react";
-import { TLink } from "@types";
 
+export function NavLink({
+  link, isActive
+}:{
+  link: TLink; isActive: boolean;
+}){
+  const animate = useBreakpointValue({
+    base: {
+      color: isActive ? "#FF0DA4" : "#C9FF00",
+    },
+    md: {
+      color: isActive ? "#FF0DA4" : "#C9FF00",
+      fontSize: isActive ? "2.5rem" : "1.5rem",
+    },
+  });
 
-export function NavLink({ link, isActive } : {
-  link: TLink;
-  isActive: boolean;
-}) {
   return (
     <Link
       key={link.title}
@@ -22,11 +32,8 @@ export function NavLink({ link, isActive } : {
     >
       <Text
         as={motion.span}
-        animate={{
-          color: isActive ? "#FF0DA4" : "#C9FF00",
-          fontSize: isActive ? "2.5rem" : "1.5rem",
-        }}
-        fontSize={{ base: 8, md: 16 }}
+        animate={animate}
+        fontSize={16}
         textAlign="right"
       >
         {link.title}
