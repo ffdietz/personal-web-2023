@@ -30,7 +30,7 @@ export function Navbar() {
   useEffect(() => {
     const observerOptions: IntersectionObserverInit = {
       root: null,
-      threshold: 0.5,
+      threshold: 0.2,
     };
 
     const observerCallback: IntersectionObserverCallback = (entries) => {
