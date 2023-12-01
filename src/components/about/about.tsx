@@ -12,8 +12,10 @@ export function About() {
           w={{ base: "xs", md: "xl" }}
           m="auto"
           fontSize="2xl"
-          textAlign="center"
+          textAlign="left"
           fontWeight="bold"
+          whiteSpace="pre-line"
+          lineHeight={1.4}
         >
           {aboutText}
         </Text>
