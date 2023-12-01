@@ -4,7 +4,6 @@ import { contact, sections } from "@content";
 
 export function Contact() {
   const { id } = sections[2];
-  const breakpoint = useBreakpoint({ssr:true});
 
   return (
     <Section id={id}>
@@ -12,7 +11,7 @@ export function Contact() {
         display="flex"
         flexDir={{base: "column", md: "row"}}
         gap={{base: 20, md: 18}}
-        py={{base:36 ,md:72}}
+        py={{base:28 ,md:72}}
         mx="auto"
       >
         {contact.map((item) => {
@@ -24,18 +23,7 @@ export function Contact() {
                 alignItems="center"
                 gap={12}
               >
-                {breakpoint === "base" ? (
-                  <Text
-                    as="span"
-                    textTransform="uppercase"
-                    fontSize={{base: "2xl"}}
-                    w="full"
-                    textAlign="right"
-                  >
-                    {item.title}
-                  </Text>
-                ) : null}
-                <Icon as={item.icon} boxSize={{base: 20, md: 32}} />
+                <Icon as={item.icon} boxSize={{base: 20, md: 32}} m="auto"/>
               </Flex>
             </a>
           );
