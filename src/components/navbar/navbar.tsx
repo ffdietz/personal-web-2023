@@ -1,14 +1,12 @@
-import { useEffect, useState } from "react";
-import { AnimatePresence, motion } from "framer-motion";
 import { Box } from "@chakra-ui/react";
+import { sections } from "@content";
+import { AnimatePresence, motion } from "framer-motion";
+import { useEffect, useState } from "react";
 import { Logo } from "./logo";
 import { NavLink } from "./navlink";
 import { Resume } from "./resume";
-import { TLink } from "@types";
-import { sections } from "@content";
 
-const isBrowser = () => typeof window !== 'undefined'; //The approach recommended by Next.js
-
+const isBrowser = () => typeof window !== "undefined"; //The approach recommended by Next.js
 
 export function Navbar() {
   const [activeSection, setActiveSection] = useState<string | null>(null);
@@ -28,7 +26,7 @@ export function Navbar() {
 
   function scrollToTop() {
     if (isBrowser()) {
-    window.scrollTo({
+      window.scrollTo({
         top: 0,
         behavior: "smooth",
       });
@@ -38,7 +36,7 @@ export function Navbar() {
   useEffect(() => {
     const observerOptions: IntersectionObserverInit = {
       root: null,
-      threshold: 0.2,
+      threshold: 0.4,
     };
 
     const observerCallback: IntersectionObserverCallback = (entries) => {
@@ -66,52 +64,50 @@ export function Navbar() {
     };
   }, []);
 
-
-
   return (
     <AnimatePresence>
       <Box
         as={motion.nav}
-        initial={{opacity: 0}}
+        initial={{ opacity: 0 }}
         animate={{
           opacity: 1,
           transition: {
             duration: 0.5,
             delay: 2,
           },
-       }}
-        w={{base: "full", md: 44}}
-        h={{base: "auto", md: "full"}}
-        backdropFilter={{base: "auto", md:"none"}}
-        backdropBlur={{base: isScroll ? "5px" : "0px", md: "none"}}
+        }}
+        w={{ base: "full", md: 44 }}
+        h={{ base: "auto", md: "full" }}
+        backdropFilter={{ base: "auto", md: "none" }}
+        backdropBlur={{ base: isScroll ? "5px" : "0px", md: "none" }}
         display="flex"
-        flexDir={{base: "row", md: "column"}}
-        py={{base: 2, md: 14}}
-        px={{base: 4, md: "none"}}
+        flexDir={{ base: "row", md: "column" }}
+        py={{ base: 2, md: 14 }}
+        px={{ base: 4, md: "none" }}
         my="auto"
         position="fixed"
         zIndex={2}
         textAlign="right"
         justifyContent="space-between"
-        alignContent={{base: "center", md: "none"}}
+        alignContent={{ base: "center", md: "none" }}
       >
         <Box cursor="pointer" onClick={scrollToTop}>
           <Logo />
         </Box>
         <Box
           display="flex"
-          flexDir={{base: "row", md: "column"}}
-          gap={{base: 4, md: "none"}}
+          flexDir={{ base: "row", md: "column" }}
+          gap={{ base: 4, md: "none" }}
         >
-          {sections.map((link: TLink) => (
+          {sections.map((section) => (
             <NavLink
-              key={link.title}
-              link={link}
-              isActive={activeSection === link.id}
+              key={section.title}
+              section={section}
+              isActive={activeSection === section.id}
             />
           ))}
         </Box>
-        <Box display={{base: "none", md: "block"}}>
+        <Box display={{ base: "none", md: "block" }}>
           <Resume />
         </Box>
       </Box>

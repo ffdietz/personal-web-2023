@@ -5,13 +5,13 @@ import { technologies } from "@content";
 export function Technologies() {
   return (
     <Section>
-      <Stack w="full" py={{ base: 32, md: 36 }}>
+      <Stack w="full" h="full">
         <Flex
-          w={{ base: "xs", md: "xl" }}
+          w="xs"
+          h="full"
           wrap="wrap"
-          mx="auto"
-          columnGap={4}
-          rowGap={6}
+          columnGap={6}
+          rowGap={8}
           justifyContent="center"
           align="center"
         >
@@ -20,7 +20,7 @@ export function Technologies() {
               key={tech.name}
               src={tech.icon}
               alt={tech.name}
-              boxSize={14}
+              boxSize={16}
             />
           ))}
         </Flex>

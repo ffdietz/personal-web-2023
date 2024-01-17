@@ -1,5 +1,10 @@
 import { Stack } from "@chakra-ui/react";
-import { SectionProps } from "@types";
+
+
+interface SectionProps {
+  id?: string;
+  children: React.ReactNode;
+}
 
 export const Section: React.FC<SectionProps> = ({ id = undefined, children }) => {
   return (
