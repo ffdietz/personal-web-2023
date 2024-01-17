@@ -4,17 +4,20 @@ import { Technologies } from "@components/technologies";
 import { aboutText, sections } from "@content";
 
 export function About() {
-  const { id } = sections[0];
+  const { id } = sections["about"];
 
   return (
     <Section id={id}>
-      <Flex w="full" 
-        pb={{base: 44, md:20 }} 
-        px={{base: 0, md:72 }}>
+      <Flex 
+        w="auto" 
+        pb={{base: 44, md:20 }}
+        mx={{base: 0, md:72 }}
+        columnGap={{base: 0, md:20 }}
+      >
         <Text
           w={{ base: "xs", md: "xl" }}
           m="auto"
-          fontSize={30}
+          fontSize={28}
           textAlign="left"
           fontWeight="bold"
           whiteSpace="pre-line"

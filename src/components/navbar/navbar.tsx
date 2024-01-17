@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 import { Logo } from "./logo";
 import { NavLink } from "./navlink";
 import { Resume } from "./resume";
+import { TypeSection } from "@types";
 
 const isBrowser = () => typeof window !== "undefined"; //The approach recommended by Next.js
 
@@ -99,10 +100,10 @@ export function Navbar() {
           flexDir={{ base: "row", md: "column" }}
           gap={{ base: 4, md: "none" }}
         >
-          {sections.map((section) => (
+          {Object.values(sections).map((section) => (
             <NavLink
               key={section.title}
-              section={section}
+              section={section as TypeSection}
               isActive={activeSection === section.id}
             />
           ))}

@@ -39,7 +39,12 @@ export function NavLink({
           ?.scrollIntoView({ behavior: "smooth", block: scrollOption });
       }}
     >
-      <Text as={motion.span} animate={animate} fontSize={16} textAlign="right">
+      <Text
+        as={motion.span}
+        animate={animate}
+        fontSize={16}
+        textAlign="right"
+      >
         {title}
       </Text>
     </Link>
