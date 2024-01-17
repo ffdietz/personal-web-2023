@@ -12,14 +12,17 @@ export function Navbar() {
   const [activeSection, setActiveSection] = useState<string | null>(null);
 
   const [isScroll, setIsScroll] = useState<boolean>(false);
-  const changeNavbarColor = () => {
+  const scrollSet = () => {
     if (window.scrollY >= 80) {
       setIsScroll(true);
     } else {
       setIsScroll(false);
     }
   };
-  window.addEventListener("scroll", changeNavbarColor);
+
+  if (isBrowser()) {
+    window.addEventListener("scroll", scrollSet);
+  }
 
   function scrollToTop() {
     if (isBrowser()) {

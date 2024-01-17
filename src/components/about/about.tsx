@@ -17,6 +17,8 @@ export function About() {
           fontSize={30}
           textAlign="left"
           fontWeight="bold"
+          whiteSpace="pre-line"
+          lineHeight={1.4}
         >
           {aboutText}
         </Text>

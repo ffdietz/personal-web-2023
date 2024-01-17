@@ -1,4 +1,4 @@
-import { Flex, Image, Stack } from "@chakra-ui/react";
+import { Flex, Image, Stack, Text } from "@chakra-ui/react";
 import { Section } from "@components/section";
 import { technologies } from "@content";
 
