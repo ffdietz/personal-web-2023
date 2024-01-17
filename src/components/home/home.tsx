@@ -3,7 +3,6 @@ import { About } from "@components/about";
 import { BackgroundScene } from "@components/background-scene";
 import { Contact } from "@components/contact";
 import { Hero } from "@components/hero";
-import { Technologies } from "@components/technologies";
 import { Works } from "@components/works";
 import { AnimatePresence, motion } from "framer-motion";
 
@@ -30,10 +29,9 @@ export function Home() {
           <BackgroundScene />
         </Stack>
       </AnimatePresence>
-      <Stack gap={0} zIndex={1}>
+      <Stack gap={12} zIndex={1}>
         <Hero />
         <About />
-        <Technologies />
         <Works />
         <Contact />
       </Stack>
