@@ -4,7 +4,7 @@ import { experiences, sections } from "../../content";
 import { WorkCard } from "./work-card";
 
 export function Works() {
-  const { id } = sections[1];
+  const { id } = sections["works"];
 
   return (
     <Section id={id}>

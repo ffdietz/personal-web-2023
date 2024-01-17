@@ -23,23 +23,23 @@ import {
 } from "../../public/assets";
 import { GithubIcon, LinkedinIcon, MailIcon } from "../theme/icons";
 
-export const sections: TypeSection[] = [
-  {
+export const sections = {
+  about: {
     id: "about",
     title: "About",
     scrollOption: "center",
   },
-  {
+  works: {
     id: "works",
     title: "Works",
     scrollOption: "start",
   },
-  {
+  contact:{
     id: "contact",
     title: "Contact",
     scrollOption: "center",
   },
-];
+};
 
 export const heroText: String = "Creating with code";
 

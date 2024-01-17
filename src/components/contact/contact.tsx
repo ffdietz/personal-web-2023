@@ -3,15 +3,15 @@ import { Section } from "@components/section";
 import { contact, sections } from "@content";
 
 export function Contact() {
-  const { id } = sections[2];
+  const { id } = sections["contact"];
 
   return (
     <Section id={id}>
       <Box
         display="flex"
         flexDir={{base: "column", md: "row"}}
-        gap={{base: 20, md: 18}}
-        py={{base:28 ,md:72}}
+        gap={{ base:20, md:18 }}
+        py={{ base:28, md:72 }}
         mx="auto"
       >
         {contact.map((item) => {
