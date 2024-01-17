@@ -1,3 +1,4 @@
+import { TypeContact, TypeExperience, TypeSection, TypeSkill, TypeTechnology } from "@types";
 import {
   amigo,
   css,
@@ -22,30 +23,34 @@ import {
 } from "../../public/assets";
 import { GithubIcon, LinkedinIcon, MailIcon } from "../theme/icons";
 
-export const sections = [
+export const sections: TypeSection[] = [
   {
     id: "about",
     title: "About",
+    scrollOption: "center",
   },
   {
     id: "works",
     title: "Works",
+    scrollOption: "start",
   },
   {
     id: "contact",
     title: "Contact",
+    scrollOption: "center",
   },
 ];
 
-export const heroText = "Creating with code";
+export const heroText: String = "Creating with code";
 
-export const aboutText = 
+export const aboutText: String = 
   `I'm Felipe, a software artisan merging visual arts with code. 
-  With expertise in Javascript and C++, 
-  I craft software solutions that are both functional and visually compelling. 
+
+  With expertise in Javascript and C++, I craft software solutions that are both functional and visually compelling.
+
   Let's collaborate in creating digital landscapes that leave a lasting impression!`;
 
-export const technologies = [
+export const technologies: TypeTechnology[] = [
   {
     name: "HTML5",
     icon: html,
@@ -96,7 +101,7 @@ export const technologies = [
   },
 ];
 
-export const skills = [
+export const skills: TypeSkill[] = [
   {
     name: "CI/CD",
   },
@@ -117,7 +122,7 @@ export const skills = [
   },
 ];
 
-export const experiences = [
+export const experiences: TypeExperience[] = [
   {
     title: "EMF Workshop",
     company: "Akademie der Künste",
@@ -158,7 +163,7 @@ export const experiences = [
   },
   {
     title: "Freelance Full-Stack Developer",
-    company: undefined,
+    company: "Autonomous",
     image: fullstack,
     date: "2021 -",
     points: [
@@ -198,7 +203,7 @@ export const experiences = [
 
 export const projects = [];
 
-export const contact = [
+export const contact: TypeContact[] = [
   {
     title: "email",
     link: "mailto:felipefierrod@gmail.com",
