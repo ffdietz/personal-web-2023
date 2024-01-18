@@ -1,4 +1,4 @@
-import { Box, Flex, Icon, Text, useBreakpoint } from "@chakra-ui/react";
+import { Box, Flex, Icon } from "@chakra-ui/react";
 import { Section } from "@components/section";
 import { contact, sections } from "@content";
 
