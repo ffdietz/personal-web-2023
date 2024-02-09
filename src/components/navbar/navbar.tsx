@@ -1,10 +1,10 @@
-import { Box } from "@chakra-ui/react";
+import { Box, Stack } from "@chakra-ui/react";
 import { sections } from "@content";
 import { AnimatePresence, motion } from "framer-motion";
 import { useEffect, useState } from "react";
-import { Logo } from "./logo";
-import { NavLink } from "./navlink";
-import { Resume } from "./resume";
+import { Logo } from "../logo";
+import { NavLink } from "../navlink";
+import { Resume } from "../resume";
 import { TypeSection } from "@types";
 
 const isBrowser = () => typeof window !== "undefined"; //The approach recommended by Next.js
@@ -67,7 +67,7 @@ export function Navbar() {
 
   return (
     <AnimatePresence>
-      <Box
+      <Stack
         as={motion.nav}
         initial={{ opacity: 0 }}
         animate={{
@@ -81,7 +81,6 @@ export function Navbar() {
         h={{ base: "auto", md: "full" }}
         backdropFilter={{ base: "auto", md: "none" }}
         backdropBlur={{ base: isScroll ? "5px" : "0px", md: "none" }}
-        display="flex"
         flexDir={{ base: "row", md: "column" }}
         py={{ base: 2, md: 14 }}
         px={{ base: 4, md: "none" }}
@@ -111,7 +110,7 @@ export function Navbar() {
         <Box display={{ base: "none", md: "block" }}>
           <Resume />
         </Box>
-      </Box>
+      </Stack>
     </AnimatePresence>
   );
 }

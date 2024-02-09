@@ -1,4 +1,4 @@
-import { OrbitControls, ScrollControls } from "@react-three/drei";
+import { OrbitControls } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
 import ThreeScene from "./three-scene";
 import { Stack } from "@chakra-ui/react";
@@ -21,14 +21,13 @@ export const BackgroundScene = () => {
       h="full"
       position="fixed"
       top={0}
+      zIndex={-1}
       >
       <Canvas camera={{ position: [0, 0, 15] }}>
-        <OrbitControls autoRotate />
+        <OrbitControls autoRotate enableZoom={false}/>
         <ambientLight />
         <pointLight position={[0, 0, 10]} />
-        <ScrollControls pages={1}>
-          <ThreeScene />
-        </ScrollControls>
+        <ThreeScene />
       </Canvas>
     </Stack>
   );

@@ -10,8 +10,8 @@ export function About() {
     <Section id={id}>
       <Flex 
         w="auto" 
-        pb={{base: 44, md:20 }}
-        mx={{base: 0, md:72 }}
+        pb={{base: 44, md: 20 }}
+        mx={{base: 0, md: 72 }}
         columnGap={{base: 0, md:20 }}
       >
         <Text
