@@ -20,22 +20,23 @@ export function WorkCard({ experience }: { experience: Experience }) {
       as={motion.div}
       animate={{
         backgroundSize: isOpen ? "150%" : "90%",
-        backgroundColor: isOpen ? "rgba(0, 0, 0, 0.6)" : "rgba(0, 0, 0, 0.45)",
+        backgroundColor: isOpen ? "rgba(0, 0, 0, 0.6)" : "rgba(0, 0, 0, 0.3)",
       }}
       w="xs"
       h="sm"
       color="secondaryColor"
-      borderRadius={10}
       bgImage={`url(${image})`}
       bgBlendMode="color"
       bgRepeat="no-repeat"
       bgPosition="center"
       cursor="pointer"
+      borderRadius={20}
       onClick={() => setIsOpen(!isOpen)}
     >
       <Stack
         as={motion.div}
-        animate={{ backdropFilter: isOpen ? "blur(10px)" : "blur(0px)" }}
+        animate={{ backdropFilter: isOpen ? "blur(35px)" : "blur(0px)" }}
+        borderRadius={20}
         w="full"
         h="full"
         padding={4}
