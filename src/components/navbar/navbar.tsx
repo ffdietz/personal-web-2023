@@ -84,7 +84,7 @@ export function Navbar() {
         flexDir={{ base: "row", md: "column" }}
         py={{ base: 2, md: 14 }}
         px={{ base: 4, md: "none" }}
-        my="auto"
+        mt={-1}
         position="fixed"
         zIndex={2}
         textAlign="right"

@@ -4,15 +4,19 @@ export function Logo() {
   return (
     <Stack>
       <Text
-        fontFamily=""
-        fontSize={{base: 26, md:58}}
-        fontWeight={500}
-        lineHeight="0.75"
+        fontSize={{ base: 26, md: 58 }}
+        fontWeight={900}
+        lineHeight={0.75}
         textTransform="uppercase"
       >
         ffd
       </Text>
-      <Text fontFamily="" fontSize={{base:8, md:18}} marginLeft="auto" lineHeight={0.1}>
+      <Text
+        fontSize={{ base: 8, md: 18 }}
+        fontWeight={900}
+        lineHeight={0.1}
+        marginLeft="auto"
+      >
         developer
       </Text>
     </Stack>

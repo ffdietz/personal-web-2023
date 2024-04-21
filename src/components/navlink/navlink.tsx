@@ -43,6 +43,7 @@ export function NavLink({
         as={motion.span}
         animate={animate}
         fontSize={16}
+        fontWeight={900}
         textAlign="right"
       >
         {title}
