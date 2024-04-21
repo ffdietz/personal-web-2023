@@ -7,16 +7,17 @@ export const theme: ThemeOverride = extendTheme({
     body: relayLight.style.fontFamily,
   },
   colors: {
-    primaryColor: "#C9FF00",
+    primaryColor: "#000",
     secondaryColor: "#FF0DA4",
     accentColor: "#5B0DFF",
   },
   styles: {
     global: {
       body: {
-        background: "black",
+        background: "grey",
         color: "primaryColor",
         fontFamily: "body",
+        overflowX:"hidden",
         overscrollBehavior: "none",
         "::-webkit-scrollbar": {
           display: "none",

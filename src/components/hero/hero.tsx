@@ -6,7 +6,13 @@ import { AnimatePresence, motion } from "framer-motion";
 export function Hero() {
   return (
     <Section id="#">
-      <Stack w="full" m="auto" position="relative" py={96}>
+      <Stack
+        w="full"
+        m="auto"
+        py={{ base: 72, "2xl": 96 }}
+        px={{ base: 12, md: 32, "2xl": 96 }}
+        my={{ base: 12, "2xl": 40 }}
+      >
         <AnimatePresence>
           <Text
             as={motion.p}
@@ -23,11 +29,8 @@ export function Hero() {
                 delay: 1,
               },
             }}
-            position="absolute"
-            w={{ base: "2xs", md: "full" }}
-            top="50%"
-            right={{ base: 8, md: 28 }}
-            fontSize="5xl"
+            w={{ base: "auto", md: "full" }}
+            fontSize={{ base: "4xl", md: "5xl", xl: "7xl" }}
             fontWeight="bold"
             textAlign="right"
             textTransform="uppercase"
