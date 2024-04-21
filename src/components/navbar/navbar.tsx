@@ -1,3 +1,4 @@
+"use client";
 import { Box, Stack } from "@chakra-ui/react";
 import { sections } from "@content";
 import { AnimatePresence, motion } from "framer-motion";
