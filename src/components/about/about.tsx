@@ -8,16 +8,18 @@ export function About() {
 
   return (
     <Section id={id}>
-      <Flex 
-        w="auto" 
-        pb={{base: 44, md: 20 }}
-        mx={{base: 0, md: 72 }}
-        columnGap={{base: 0, md:20 }}
+      <Flex
+        w="auto"
+        flexDir={{ base: "column", md: "row" }}
+        pb={20}
+        mx={{ base: "auto", md: 72 }}
+        columnGap={{ base: 0, md: 20 }}
+        rowGap={{ base: 20, md: 0 }}
       >
         <Text
-          w={{ base: "xs", md: "xl" }}
+          w={{ base: "2xs", md: "xl" }}
           m="auto"
-          fontSize={28}
+          fontSize={{base:22, md:28}}
           textAlign="left"
           fontWeight="bold"
           whiteSpace="pre-line"

@@ -24,11 +24,11 @@ export function WorkCard({ experience }: { experience: Experience }) {
       }}
       w="xs"
       h="sm"
-      color="secondaryColor"
       bgImage={`url(${image})`}
-      bgBlendMode="color"
+      bgBlendMode="color-dodge"
       bgRepeat="no-repeat"
       bgPosition="center"
+      color="secondaryColor"
       cursor="pointer"
       borderRadius={20}
       onClick={() => setIsOpen(!isOpen)}

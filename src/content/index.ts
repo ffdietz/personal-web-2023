@@ -124,6 +124,16 @@ export const skills: TypeSkill[] = [
 
 export const experiences: TypeExperience[] = [
   {
+    title: "Front-end Developer",
+    company: "Twelve x Twelve",
+    image: twelve,
+    date: "2022 - 2023",
+    points: [
+      "Front-end features and improvements in the company's marketplace.",
+      "Lead developer and project managment of the homepage www.twlvxtwlv.com.",
+    ],
+  },
+  {
     title: "EMF Workshop",
     company: "Akademie der Künste",
     image: workshop,
@@ -131,16 +141,6 @@ export const experiences: TypeExperience[] = [
     points: [
       "Circuit design, production of electronic boards for portable electromagnetic field sensors.",
       "Device construction workshop for children at the MiK Jugendkunstschule Berlin Mitte.",
-    ],
-  },
-  {
-    title: "Front-end Developer",
-    company: "Twelve x Twelve",
-    image: twelve,
-    date: "2022 - 2023",
-    points: [
-      "Front-end features and improvements in the company's marketplace.",
-      "Lead developer and software project of the homepage managing www.twlvtwlv.com.",
     ],
   },
   {
