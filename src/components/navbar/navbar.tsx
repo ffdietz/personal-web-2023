@@ -1,3 +1,4 @@
+"use client";
 import { Box, Stack } from "@chakra-ui/react";
 import { sections } from "@content";
 import { AnimatePresence, motion } from "framer-motion";
@@ -12,7 +13,7 @@ const isBrowser = () => typeof window !== "undefined"; //The approach recommende
 export function Navbar() {
   const [activeSection, setActiveSection] = useState<string | null>(null);
   const [isScroll, setIsScroll] = useState<boolean>(false);
-  
+
   const scrollSet = () => {
     if (window.scrollY >= 80) {
       setIsScroll(true);
