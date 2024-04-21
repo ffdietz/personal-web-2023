@@ -8,13 +8,12 @@ interface SectionProps {
 
 export const Section: React.FC<SectionProps> = ({ id = undefined, children }) => {
   return (
-    <section id={id || undefined}>
+    <section id={id}>
       <Stack
         justifyContent="center"
-        w={{base: "full", md: "7xl", xl:"full"}}
+        w="full"
         h={{base: "full", md: "auto"}}
-        mx="auto"
-        float="right"
+        mr="auto"
       >
         {children}
       </Stack>

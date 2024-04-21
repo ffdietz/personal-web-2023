@@ -5,13 +5,14 @@ export function Resume() {
   return (
     <Link href="/FelipeFierro-Developer2023.pdf" locale={false}>
       <Button
+        w={14}
+        h={14}
         size="lg"
-        w={24}
-        h={10}
         colorScheme="cyan"
         variant="outline"
         borderRadius="full"
         borderWidth={3}
+        _hover={{bg:"none"}}
       >
         CV
       </Button>

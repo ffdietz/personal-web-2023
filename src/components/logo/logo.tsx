@@ -4,15 +4,15 @@ export function Logo() {
   return (
     <Stack>
       <Text
-        fontSize={{ base: 26, md: 58 }}
+        w={{base:"auto", md:"full"}}
+        fontSize={{ base: 22, md: 28 }}
         fontWeight={900}
         lineHeight={0.75}
-        textTransform="uppercase"
       >
-        ffd
+        Felipe Fierro
       </Text>
       <Text
-        fontSize={{ base: 8, md: 18 }}
+        fontSize={{ base: 12, md: 18 }}
         fontWeight={900}
         lineHeight={0.1}
         marginLeft="auto"

@@ -7,11 +7,11 @@ export function Contact() {
 
   return (
     <Section id={id}>
-      <Box
-        display="flex"
+      <Flex
         flexDir={{base: "column", md: "row"}}
-        gap={{ base:20, md:18 }}
-        py={{ base:28, md:72 }}
+        columnGap={32}
+        rowGap={20}
+        py={{ base:36, md:64 , "2xl":96}}
         mx="auto"
       >
         {contact.map((item) => {
@@ -21,14 +21,14 @@ export function Contact() {
                 w="3xs"
                 justifyContent={{base:"space-between", md:"center"}}
                 alignItems="center"
-                gap={12}
+                gap={{base:12, "2xl":32}}
               >
-                <Icon as={item.icon} boxSize={{base: 20, md: 32}} m="auto"/>
+                <Icon as={item.icon} boxSize={{base: 20, md: 32, "2xl":48}} m="auto"/>
               </Flex>
             </a>
           );
         })}
-      </Box>
+      </Flex>
     </Section>
   );
 }

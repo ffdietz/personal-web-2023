@@ -11,8 +11,8 @@ const isBrowser = () => typeof window !== "undefined"; //The approach recommende
 
 export function Navbar() {
   const [activeSection, setActiveSection] = useState<string | null>(null);
-
   const [isScroll, setIsScroll] = useState<boolean>(false);
+  
   const scrollSet = () => {
     if (window.scrollY >= 80) {
       setIsScroll(true);
@@ -82,9 +82,8 @@ export function Navbar() {
         backdropFilter={{ base: "auto", md: "none" }}
         backdropBlur={{ base: isScroll ? "5px" : "0px", md: "none" }}
         flexDir={{ base: "row", md: "column" }}
-        py={{ base: 2, md: 14 }}
+        py={{ base: 6, md: 14 }}
         px={{ base: 4, md: "none" }}
-        mt={-1}
         position="fixed"
         zIndex={2}
         textAlign="right"

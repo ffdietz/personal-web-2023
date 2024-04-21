@@ -12,9 +12,11 @@ export function About() {
         w="auto"
         flexDir={{ base: "column", md: "row" }}
         pb={20}
-        mx={{ base: "auto", md: 72 }}
-        columnGap={{ base: 0, md: 20 }}
-        rowGap={{ base: 20, md: 0 }}
+        mx="auto"
+        px={{base:"none", md:64 }}
+        py={{base:44, md:64 }}
+        columnGap={{ base: 0, md: 10 }}
+        rowGap={{ base: 20, md:0 }}
       >
         <Text
           w={{ base: "2xs", md: "xl" }}

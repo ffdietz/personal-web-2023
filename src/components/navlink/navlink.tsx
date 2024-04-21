@@ -1,4 +1,4 @@
-import { Text, useBreakpointValue } from "@chakra-ui/react";
+import { Text, useBreakpoint, useBreakpointValue } from "@chakra-ui/react";
 import { TypeSection } from "@types";
 import { motion } from "framer-motion";
 import Link from "next/link";
@@ -13,6 +13,11 @@ export function NavLink({
   isActive,
 } : NavLinkProps ) {
   const { id, title, scrollOption } = section;
+  const breakpoint = useBreakpoint({ ssr: false });
+
+  if(breakpoint!=="xl" && breakpoint !=="2xl"){
+    scrollOption == "start";
+  }
 
   const animate = useBreakpointValue(
     {
@@ -36,7 +41,13 @@ export function NavLink({
         event.preventDefault();
         document
           .getElementById(id)
-          ?.scrollIntoView({ behavior: "smooth", block: scrollOption });
+          ?.scrollIntoView({
+            behavior: "smooth",
+            block:
+              breakpoint !== "xl" && breakpoint !== "2xl"
+                ? "start"
+                : scrollOption,
+          });
       }}
     >
       <Text
